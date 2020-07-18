@@ -105,6 +105,7 @@ public class ChunkedWebRecSessionBuilder {
             setUserAgentComment(mCaller);
         }
 
+        // TODO
         String urlService = prefs.getString(context.getString(R.string.keyHttpServer), context.getString(R.string.defaultHttpServer));
         setFromExtras(extras, urlService);
         mNbest = makeNbest(extras);
@@ -307,14 +308,6 @@ public class ChunkedWebRecSessionBuilder {
         Object selectedLanguage = BundleUtils.getBundleValue(extras, "selectedLanguage");
         if (selectedLanguage != null) {
             return selectedLanguage.toString();
-        }
-
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(mContext);
-        if (prefs.getBoolean(mContext.getString(R.string.keyRespectLocale), false)) {
-            Locale locale = Locale.getDefault();
-            if (locale != null) {
-                return locale.toString();
-            }
         }
 
         return null;

@@ -116,12 +116,12 @@ public class WebSocketRecognitionService extends AbstractRecognitionService {
     @Override
     protected String getEncoderType() {
         return PreferenceUtils.getPrefString(getSharedPreferences(), getResources(),
-                R.string.keyImeAudioFormat, R.string.defaultAudioFormat);
+                R.string.keyWsAudioFormat, R.string.defaultAudioFormat);
     }
 
     @Override
     protected boolean isAudioCues() {
-        return PreferenceUtils.getPrefBoolean(getSharedPreferences(), getResources(), R.string.keyImeAudioCues, R.bool.defaultImeAudioCues);
+        return PreferenceUtils.getPrefBoolean(getSharedPreferences(), getResources(), R.string.keyWsAudioCues, R.bool.defaultWsAudioCues);
     }
 
     protected void configureHandler(boolean isUnlimitedDuration, boolean isPartialResults) {

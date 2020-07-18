@@ -3,73 +3,19 @@
 
     <string name="labelRecognitionServiceWs">Kõnele teenus</string>
 
-    <!-- Activity labels -->
-    <string name="labelActivityRecognizerIntent">@string/labelApp</string>
-
-    <string name="hintSearch">Otsi</string>
-    <string name="labelSearch">Otsi"</string>
-    <string name="titleSearchRewrites">Otsi</string>
-    <string name="hintName">nimi</string>
-
-    <string name="titleAutoStart">Autostart</string>
-    <string name="summaryAutoStart">Alusta lindistamist automaatselt</string>
     <string name="titleAutoStopAfterPause">Autostopp pärast pausi</string>
     <string name="summaryAutoStopAfterPause">Lõpeta lindistamine pärast paarisekundist pausi</string>
-    <string name="titleAutoStopAfterTime">Lindistuse maks. kestus</string>
-    <string name="summaryAutoStopAfterTime">Lõpeta lindistamine pärast %1$s sekundit</string>
-    <string name="titleRespectLocale">Kasuta telefoni keelt</string>
-    <string name="summaryRespectLocale">Eelda, et kõnesisend on telefoni kasutajaliidese keeles,
-        väljaarvatud juhul, kui rakendus määrab muu keele</string>
-    <string name="titleRecordingRate">Sämplimissagedus</string>
-    <string name="summaryRecordingRate">Sämplimissagedus %1$s korda sekundis</string>
+
     <string name="titleAudioCues">Helisignaalid</string>
     <string name="summaryAudioCues">Anna lindistamise algusest ja lõpust märku lühikese
 		helisignaaliga</string>
-    <string name="summaryAppList">Nimekiri rakendustest, kus on kasutatud
-		kõnesisendit</string>
-    <string name="summaryGrammarList">Nimekiri grammatikatest, mis tõlgivad
-		transkriptsiooni rakenduse-keelde</string>
-    <string name="titleSelectRewrites">Ümberkirjutusreeglid</string>
-    <string name="summarySelectRewrites">Reeglistike lisamine, vaatamine, sisse/välja lülitamine, testimine, …</string>
-    <string name="summarySimpleDemo">Transkribeerib kõne ja näitab tulemusi</string>
-    <string name="summaryExtrasDemo">Transkribeerib kõne ja näitab tagastatud tulemusi (sh tehnilisi)</string>
-    <string name="summaryHandsfreeDemo">Transkribeerib kõne, näitab parimaid tulemusi,
-		transkribeerib uuesti, … Kõnele saab menüü abil omistada
-		grammatika.</string>
-    <string name="summaryChatDemo">Kõnekäskudega käivitatud rakenduste ajalugu</string>
-    <string name="summaryVoiceSearchDemo">Transkribeerib kõne ning edastab tulemused
-		infootsingu rakendusele</string>
-    <string name="summaryEncoderDemo">Androidi EditText erinevat tüüpi väljadega, klaviatuuri testimiseks</string>
-    <string name="summaryFormDemo">HTML-vorm erinevat tüüpi väljadega, klaviatuuri testimiseks</string>
-
-    <!-- RecognizerIntent activity -->
-    <string name="buttonSpeak">Lindista!</string>
-    <string name="buttonImeSpeak">Vajutage nupule ja rääkige</string>
-    <string name="buttonImeStop">Lõpetamiseks vajutage nupule</string>
-    <string name="buttonYes">Jah</string>
-    <string name="buttonNo">Ei</string>
-    <string name="buttonOk">OK</string>
     <string name="buttonGoToSettings">Seadista</string>
     <string name="buttonCancel">Loobu</string>
     <string name="buttonUseDefault1">Vaikeserver 1</string>
     <string name="buttonUseDefault2">Vaikeserver 2</string>
-    <string name="statusImeTranscribing">Oodake…</string>
+
     <string name="tvAbout">&lt;p>&lt;b>%1$s&lt;/b> on kõnetuvastusteenus Androidi rakendustele,
         mis võimaldab kõne abil sooritada infootsingut, kirjutada e-kirju ja märkmeid, anda käske jne.&lt;/p>
-
-		&lt;p>Paljudes rakendustes (nt e-kirja ja lühisõnumirakendused, veebibrauser) on tekstikast või otsinguriba, millele
-        vajutades avaneb klaviatuurirakendus. Kõnele töötab kui klaviatuurirakendus, mis võimaldab teksti sisestada
-        ja toimetada kõne abil. Kõnele klaviatuuri on mõistlik kasutada vaheldumisi mõne tavaklaviatuuriga.
-        Paljudes rakendustes (nt navigatsiooni- ja tõlkerakendused, targad abilised) on väike mikrofonikujuline nupp,
-		millele vajutades eeldab rakendus kasutajalt mõnesekundilist kõnejuppi,
-        mis Androidi kõnetuvastusliidese abil tekstiks teisendatakse.
-        Kõnele sisaldab endas selle liidese implementatsiooni.&lt;/p>
-
-        &lt;p>Kuidas töötab Kõnele klaviatuur? Mikrofoninupule vajutamine
-        käivitab/lõpetab/katkestab kõnetuvastuse. Transkribeeritud tekst lisatakse kursori kohale.
-        Svaipides saab kursori asukohta muuta. Pikalt vajutades ja siis svaipides saab teksti valida.
-        Topeltvajutus lisab tühiku.
-        Ümberkirjutusreeglite abil saab luua tekstiasendus- ja tekstitoimetuskäske.&lt;/p>
 
         &lt;p>Kõnele toetab kõiki seadmes olevad tuvastusteenusi, mis on läbi Androidi avatud kõnetuvastusliidese
         kasutatavad, ning lisab omalt poolt kaks teenust,
@@ -82,173 +28,18 @@
         &lt;p>&lt;b>Kiire tuvastusega teenus&lt;/b> väljastab tuvastustulemuse juba rääkimise ajal ja ei sea
         kõnesisendi pikkusele mingit piirangut.&lt;/p>
 
-        &lt;p>&lt;b>Grammatikatoega teenus&lt;/b> võimaldab dikteerida korraga maksimaalselt 30 sekundit ning
-        väljastab tuvastustulemuse alles sisendi lõpus. Samas võimaldab ta rakendustele omistada grammatikaid,
-        et tõlkida tuvastustulemus rakenduse-spetsiifilisse keelde.
-        Nt kalkulaatorirakendusele võib omistada aritmeetikaavaldiste
-		grammatika (mis teisendab nt /kaks pluss kolm/ kujule \"2 + 3\")
-		ning kaardirakendusele või bussiaegade rakendusele Eesti aadresside grammatika.
-		Nii on võimalik rääkida eesti keeles ka rakendustes, mis on mõeldud ainult ingliskeelsele kasutajale.
-		Vt ka
-		&lt;a
-		href="http://kaljurand.github.io/Grammars/">grammatikate projekti kodulehekülge&lt;/a>.&lt;/p>
-
 		&lt;p>Põhjalikum
 		dokumentatsioon ja lähtekood on
 		&lt;a
 		href="http://kaljurand.github.io/K6nele/">%1$s veebilehel&lt;/a>.
         Kasutajaandmete kaitse kohta lugege &lt;a href="https://github.com/Kaljurand/K6nele/blob/master/privacy_policy.rst">siit&lt;/a>.&lt;/p>&lt;/p></string>
 
-    <!-- List view -->
-    <string name="emptylistApps">Siia ilmub automaatselt nimekiri rakendustest, kus
-		on kasutad kõnesisendit</string>
-    <string name="emptylistGrammars">Grammatikaid pole. Lisa uus grammatika URL
-		Lisa-nupu abil.</string>
-    <string name="emptylistServers">Servereid pole. Lisa uus serveri URL Lisa-nupu
-		abil.</string>
-    <string name="emptylistRewrites">Ümberkirjutusreeglistikke pole. Lisa ümberkirjutusreeglite tabel Lisa-nupu abil või eksportides see tabelarvutusrakendusest TSV-formaadis.</string>
-    <string name="emptylistRewriteRules">Ümberkirjutusreegleid ei leitud. Veenduge, et sisendfaili veerud on eraldatud tabulaatori abil ja esimene rida on päiseks.</string>
-    <string name="emptylistRewriteRulesFiltered">Ümberkirjutusreegleid ei leitud, mis vastaks filtrile\n%1$s</string>
-    <string name="emptylistClipboard">Klahvistikke pole. Lisa ümberkirjutusreegleid. Sisselülitatud reeglistikud ilmuvad siia klahvistikena.</string>
-    <string name="menuAppsSort">Järjesta …</string>
-    <string name="menuAppsSortByName">rakenduse paki nime järgi</string>
-    <string name="menuAppsSortByCount">kasutussageduse järgi</string>
-    <string name="menuAppsSortByGrammar">grammatika URLi järgi</string>
-    <string name="menuGrammarsAdd">Lisa</string>
-    <string name="menuServersAdd">Lisa</string>
-    <string name="menuRewritesAdd">Laadi ümberkirjutusreeglite tabel tsv-formaadis failist</string>
-    <string name="menuRewritesHelp">Kasutusjuhend näidetega</string>
-    <string name="menuDemoGrammarAssign">Omista grammatika</string>
-    <string name="menuAbout">Info</string>
-    <string name="menuHelp">Kasutusjuhend</string>
-    <string name="cmAppAssignGrammar">Omista grammatika</string>
-    <string name="cmAppRemoveGrammar">Eemalda grammatika</string>
-    <string name="cmAppAssignServer">Omista server</string>
-    <string name="cmAppRemoveServer">Eemalda server</string>
-    <string name="cmAppDelete">Kustuta</string>
-    <string name="cmGrammarView">Vaata / laadi alla</string>
-    <string name="cmGrammarEditName">Muuda nimi</string>
-    <string name="cmGrammarEditLang">Muuda keel</string>
-    <string name="cmGrammarEditUrl">Muuda URL</string>
-    <string name="cmGrammarDelete">Kustuta</string>
-    <string name="cmServerEdit">Muuda URL</string>
-    <string name="cmServerDelete">Kustuta</string>
-    <!-- General menu items -->
-    <string name="cmShare">Jaga TSV</string>
-    <string name="cmSendBase64">Jaga base64 URI</string>
-    <string name="cmTest">Proovi</string>
-    <string name="cmRename">Muuda nimi</string>
-    <string name="cmDelete">Kustuta</string>
-    <string name="confirmDeleteEntry">Eemaldan loendist \"%1$s\"?</string>
-    <string name="confirmRemoveGrammar">Tuvastan selles rakenduses kõnet ilma oma
-		grammatikata?</string>
-    <string name="confirmRemoveServer">Tuvastan selles rakenduses kõnet vaikimisi määratud
-		serveriga?</string>
-    <string name="confirmRename">Muuda nimi</string>
-    <string name="confirmDelete">Kustutan \"%1$s\"?</string>
-    <string name="taskPrefRemove">Kustutan Kõnele seade \"%1$s\"</string>
-    <string name="taskPrefPut">Panen Kõnele seade \"%1$s\" väärtuseks \"%2$s\"</string>
-    <string name="taskPrefPutUrl">Panen Kõnele seade \"%1$s\" väärtuseks veebiaadressi \"%2$s\" sisu</string>
-    <string name="dialogTitleChangeGrammarName">Muuda grammatika nimi</string>
-    <string name="dialogTitleChangeGrammarLang">Muuda grammatika keel</string>
-    <string name="dialogTitleChangeGrammarUrl">Muuda grammatika URL</string>
-    <string name="dialogTitleNewGrammar">Lisa uus grammatika URL</string>
-    <string name="dialogTitleChangeServer">Muuda serveri URL</string>
-    <string name="dialogTitleNewServer">Lisa uus serveri URL</string>
-    <string name="dialogTitleHypotheses">Kas ütlesite &#8230;</string>
-    <string name="toastForwardedMatches">Tuvastasin: %1$s</string>
-    <string name="toastAssignGrammar">Omistasin grammatika: %1$s</string>
-    <string name="toastActivated">Sisselülitatud: %1$s</string>
-    <string name="toastDeactivated">Väljalülitatud: %1$s</string>
-    <string name="toastDeleted">Kustutatud: %1$s</string>
-    <string name="toastRequestedAudioFormatNotSupported">Audioformaat pole toetatud: %1$s</string>
-    <string name="toastPlayingAudio">Mängin lindistust: %1$s, %2$s, %3$d ms</string>
-    <string name="toastPlayingAudioDone">Lindistuse lõpp</string>
-    <string name="errorLoadRewrites">VIGA: ümberkirjutusreeglite laadimine luhtus: %1$s</string>
-    <plurals name="statusLoadRewrites">
-        <item quantity="one">1 reegel</item>
-        <item quantity="other">%d reeglit</item>
-    </plurals>
-    <plurals name="statusLoadRewritesFiltered">
-        <item quantity="one">1 reegel (filtreeritud)</item>
-        <item quantity="other">%d reeglit (filtreeritud)</item>
-    </plurals>
-    <plurals name="statusLoadRewritesErrors">
-        <item quantity="one">1 viga</item>
-        <item quantity="other">%d viga</item>
-    </plurals>
-    <plurals name="subtitleRewritesSelector">
-        <item quantity="one">%2$d tabel, aktiivseid %1$d</item>
-        <item quantity="other">%2$d tabelit, aktiivseid %1$d</item>
-    </plurals>
-    <string name="entryGrammarName1">[piiramata sisend]</string>
-    <string name="entryGrammarDesc1">Selle grammatika saab omistada rakendustele, kus te
-		soovite igal juhul vabas vormis rääkida, sõltumata sellest, kas
-		rakendus ise on määranud kasutamiseks mingi grammatika</string>
-    <string name="errorRecognizerNotPresent">VIGA: telefonis puudub kõnetuvastusteenust pakkuv
-		rakendus</string>
-
-    <!-- Error messages used in exceptions and toasts -->
-    <string name="errorFailedPlayAudio">VIGA: lindistatud heli mahamängimine luhtus: %1$s, %2$s</string>
-    <string name="errorFailedLaunchApp">VIGA: see rakendus pole käivitatav või pole (enam)
-		installeeritud: %1$s</string>
-    <string name="errorFailedGetGrammarUrl">VIGA: grammatika aadressi valimine luhtus</string>
-    <string name="errorFailedGetServerUrl">VIGA: serveri aadressi valimine luhtus</string>
-
-    // SpeechRecognizer error messages (9) shown in the IME
-    <string name="errorImeResultAudioError">lindistamine luhtus</string>
-    <string name="errorImeResultNetworkError">serveriga puudub ühendus</string>
-    <string name="errorImeResultNetworkTimeoutError">server ei tööta</string>
-    <string name="errorImeResultRecognizerBusy">server on ülekoormatud</string>
-    <string name="errorImeResultClientError">rakenduse viga</string>
-    <string name="errorImeResultServerError">serveri viga</string>
-    <string name="errorImeResultSpeechTimeout">kõnet polnud kuulda</string>
-    <string name="errorImeResultNoMatch">transkribeerimine luhtus</string>
-    <string name="errorImeResultInsufficientPermissions">vajalikud õigused puuduvad</string>
-
-    <string name="errorResultAudioError">Lindistamine luhtus.
-        Võibolla mõni teine rakendus parasjagu lindistab.</string>
-    <string name="errorResultNetworkError">Puudub ühendus kõnetuvastusserveriga.
-        Võrguühendus on välja lülitatud või server ei tööta.</string>
-    <string name="errorResultClientError">Rakenduse viga</string>
-    <string name="errorResultServerError">Kõnetuvastusserveri viga</string>
-    <string name="errorResultNoMatch">Sisendkõne transkribeerimine luhtus. Proovige
-		uuesti!</string>
-    <string name="errorResultCanceled">Katkestatud</string>
-    <string name="errorRecognizerSettingsNotPresent">Tuvastusteenusel puudub konfiguratsioonipaneel</string>
-    <string name="errorCantCreateRecorder">VIGA: lindistaja loomine luhtus</string>
-    <string name="exceptionMalformedUrl">VIGA: URLi formaat vigane</string>
     <string name="errorNetworkUndefined">VIGA: võrgu IP aadress pole määratud</string>
-    <string name="errorFailedGetCurrentInputConnection">VIGA: ühenduse loomine tekstivälja ja klaviatuuri vahel luhtus</string>
-    <string name="promptSearch">Öelge veebiotsingu päring</string>
-    <string name="promptDemo">Öelge nt: %1$s</string>
-
-    <!-- Content description of images and buttons -->
-    <string name="cdMicrophone">Vajutage sellele nupule ja kõnelege</string>
-    <string name="cdAppIcon">Rakenduse logo</string>
-    <string name="cdServiceIcon">Teenuse logo</string>
-    <string name="cdChangeInputMethod">Vahetage sisestusmeetodit</string>
-    <string name="cdGo">Käivitage otsing</string>
-    <string name="cdSettings">Kõnele seaded</string>
-    <string name="cdImeDelete">Kustuta eelnev sümbol</string>
-    <string name="cdImeNewline">Lisa reavahetus</string>
 
     <string name="promptPermissionRationale">Heli salvestamise õigus on Kõnele jaoks hädavajalik,
         palun andke see õigus.</string>
 
-    <string-array name="entriesAutoStopAfterTime">
-        <item>2 sek</item>
-        <item>5 sek</item>
-        <item>10 sek</item>
-        <item>20 sek</item>
-        <item>30 sek</item>
-    </string-array>
-
-    <string-array name="entriesImeMode">
-        <item>Svaip vasakule kustutab eelneva sõna, svaip paremale lisab uue rea</item>
-        <item>Svaipimine liigutab kursorit</item>
-    </string-array>
-
+    <string name="errorFailedGetServerUrl">VIGA: serveri aadressi valimine luhtus</string>
     <plurals name="summaryWsServerWithStatus">
         <item quantity="one">%d vaba slott</item>
         <item quantity="other">%d vaba slotti</item>
@@ -256,38 +47,10 @@
     <string name="summaryServiceWs">Kaldi GStreamer serveri põhine teenus. Serveriaadressi on võimalik muuta. Vaikeserver toetab eesti keelt ja kiiret/täpset tuvastust.</string>
     <string name="labelActivityPreferencesRecognitionServiceWs">@string/labelRecognitionServiceWs</string>
     <string name="titleWsServer">Serveriaadress</string>
-    <string name="titleEnableIme">Kõne &amp; svaip klaviatuuri sisselülitamine</string>
-    <string name="summaryEnableIme">See klaviatuur võimaldab dikteerida kõikidesse tekstikastidesse, kõikides rakendustes, ja teksti svaip-operatsioonidega muuta. Vajutage siia, et see Androidi virtuaalklaviatuuriseadetes sisse lülitada.</string>
-    <string name="summaryHelpText">Näita otsingupaneelil abiteksti (teeb paneeli sellevõrra suuremaks)</string>
-    <string name="titleHelpText">Abitekst</string>
-    <string name="titleReturnErrors">Tagasta veateated</string>
-    <string name="summaryReturnErrors">Tagasta audio/võrgu/jne vigade teated kutsuvale rakendusele</string>
-    <string name="titleImeShowPartialResults">Vahetulemused</string>
-    <string name="summaryImeShowPartialResults">Näita tekstikastis kõnetuvastuse vahetulemusi</string>
-    <string name="summaryImeHelpText">Näita klaviatuuril abiteksti (teeb klaviatuuri sellevõrra suuremaks)</string>
-    <string name="titleImeHelpText">Abitekst</string>
-    <string name="dialogTitleCombo">Keeled &amp; teenused</string>
-    <string name="titleCombo">Kõnetuvastuskeeled &amp; teenused</string>
-    <string name="summaryImeCombo">Uuendan…</string>
-    <string name="emptylistImeCombos">Praegu kasutatakse eesti keelt ja Kõnele (kiire tuvastusega) teenust. Keelte ja teenuste lisamiseks või muutmiseks vajutage siia.</string>
-    <string name="emptylistCombos">@string/emptylistImeCombos</string>
-    <string name="titleMaxHypotheses">Tuvastushüpoteeside arv</string>
 
-    <string name="labelPermissionFetchUrl">laadi URL ja käivita selle sisu</string>
-    <string name="descriptionPermissionFetchUrl">Lubab rakendusel laadida etteantud URL, interpreteerida selle sisu kui rakenduse nime ja sisendparameetreid, ning vastav rakendus vastavate sisendparameetritega käivitada.</string>
-
-    <string name="titleSystemVoiceInputSettings">Kõnetuvastusteenused (süsteemsed seaded)</string>
-    <string name="summarySystemVoiceInputSettings">Kõikide paigaldatud kõnetuvastusteenuste ning nn \"Abirakenduse\" seaded</string>
-
-    <string name="summaryMaxHypotheses">Tagastatud tuvastushüpoteeside arv. Eeldab teenuse toetust.</string>
-    <string name="labelActivityEncoderListDemo">Audioformaadid</string>
     <string name="summaryAudioFormat">%1$s\n(Mitte-raw formaadi kasutamine vähendab võrguliiklust 2 korda. Kõikidel seadmetel ei pruugi toimida.)</string>
     <string name="titleAudioFormat">Audioformaat</string>
-    <string name="buttonImeStopByPause">Lõpetamiseks tehke paus</string>
-    <string name="buttonApplyDeveloperDefaults">Arendaja seaded</string>
-    <string name="buttonLaunchRewrites">Ava ümberkirjutusreeglid</string>
 
-    <string name="labelActivityImeListDemo">Kõneklaviatuurid</string>
     <string name="buttonApply">Rakenda</string>
     <string name="buttonScan">Otsi</string>
     <string name="cdScan">Otsi (koht)võrgust servereid, et asendada teenuse aadress mõne leitud serveri aadressiga.</string>

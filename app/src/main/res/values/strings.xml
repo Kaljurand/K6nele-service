@@ -1,250 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="labelApp" translatable="false">Kõnele service</string>
-
-    <string name="labelComboListItem" translatable="false">• %2$s · %1$s</string>
-    <string name="labelComboItem" translatable="false">%2$s · %1$s</string>
-    <string name="labelSpeechInputViewMessage" translatable="false">[ %1$s ]</string>
-    <string name="middot" translatable="false">·</string>
-
     <string name="descriptionApp" translatable="false">speech-to-text service for Android apps</string>
+    <string name="hintLocalServer" translatable="false">10.0.0.2</string>
+    <string name="statusServerStatus" translatable="false">…</string>
+    <string name="summaryWsServer" translatable="false">%1$s</string>
 
     <string name="labelRecognitionServiceWs">Kõnele service</string>
-
-    <!-- Activity labels -->
-    <string name="labelActivityRecognizerIntent">@string/labelApp</string>
     <string name="labelActivityPreferencesRecognitionServiceWs">@string/labelRecognitionServiceWs</string>
 
-    <string name="hintSearch">Search</string>
-    <string name="labelSearch">Search"</string>
-    <string name="titleSearchRewrites">Filter rewrites</string>
-    <string name="hintName">name</string>
-    <string name="hintLocalServer" translatable="false">10.0.0.2</string>
-
-    <!-- Preferences activity -->
     <string name="summaryServiceWs">Service based on the Kaldi GStreamer server. The server URL can be changed. The default server supports Estonian and fast/accurate recognition.</string>
-    <string name="titleAutoStart">Auto start</string>
-    <string name="summaryAutoStart">Start recording automatically</string>
+
     <string name="titleAutoStopAfterPause">Auto stop after pause</string>
     <string name="summaryAutoStopAfterPause">Stop recording after a few seconds of pause</string>
-    <string name="titleAutoStopAfterTime">Max recording time</string>
-    <string name="summaryAutoStopAfterTime">Stop recording after %1$s seconds</string>
-    <string name="titleImeShowPartialResults">Partial results</string>
-    <string name="summaryImeShowPartialResults">Show partial recognition results in the text field</string>
-    <string name="titleRespectLocale">Support device language</string>
-    <string name="summaryRespectLocale">Assume that the input speech is in the device\'s default language,
-        unless the app sets a different language</string>
-    <string name="titleRecordingRate">Sample rate</string>
-    <string name="summaryRecordingRate">Sampling %1$s times per second</string>
+
+
     <string name="titleAudioFormat">Audio format</string>
     <string name="summaryAudioFormat">%1$s\n(Using a non-raw format results in 2x less network traffic. Might not work on all devices.)</string>
     <string name="titleAudioCues">Play audio cues</string>
     <string name="summaryAudioCues">Beep before and after recording</string>
     <string name="titleWsServer">Server URL</string>
-    <string name="summaryWsServer" translatable="false">%1$s</string>
+
     <plurals name="summaryWsServerWithStatus">
         <item quantity="one">%d slot available</item>
         <item quantity="other">%d slots available</item>
     </plurals>
     <string name="summaryWsServerWithStatusError" translatable="false">%1$s</string>
-    <string name="titleHelpText">Help text</string>
-    <string name="summaryHelpText">Show usage instructions by the microphone button. Makes the search panel larger.</string>
-    <string name="titleReturnErrors">Return errors</string>
-    <string name="summaryReturnErrors">Return network/audio/etc. errors to the caller (useful if the caller does error handling)</string>
-    <string name="titleImeHelpText">Help text</string>
-    <string name="summaryImeHelpText">Show usage instructions by the microphone button. Makes the keyboard larger.</string>
-    <string name="summaryImeCombo">Updating…</string>
-    <string name="titleEnableIme">Enable Speak &amp; swipe keyboard</string>
-    <string name="summaryEnableIme">The keyboard allows you to dictate into any text field in any app, and navigate and edit the text with swipe operations. Tap here to enable it in the Android virtual keyboard settings.</string>
-    <string name="summaryAppList">List of apps where you have used speech input</string>
-    <string name="summaryGrammarList">List of GF and JSGF grammars that translate the raw transcription into app-specific language. (Needs service support.)</string>
-    <string name="summarySimpleDemo">Demonstrates the simplest way of using the speech recognizer</string>
-    <string name="summaryExtrasDemo">Shows only the "result extras" returned by the recognizer</string>
-    <string name="summaryHandsfreeDemo">Repeatedly calls the speech recognizer and shows the best transcription. Grammar can be assigned to the input (via menu).</string>
-    <string name="summaryChatDemo">Chat-style UI for calling intents</string>
-    <string name="summaryVoiceSearchDemo">Forwards the results to a search app</string>
-    <string name="summaryEncoderDemo">Android EditTexts of various types for testing the IME</string>
-    <string name="summaryFormDemo">HTML form with various types of fields for testing the IME</string>
-    <string name="titleCombo">Recognition languages &amp; services</string>
-    <string name="dialogTitleCombo">Languages &amp; services</string>
-    <string name="titleSystemVoiceInputSettings">Recognition services (system UI)</string>
-    <string name="summarySystemVoiceInputSettings">System-wide settings panel for the installed speech recognition services, as well as the Assist app</string>
 
-    <string name="titleSelectRewrites">Rewrites</string>
-    <string name="summarySelectRewrites">List of available rewrite rule tables that can be used to rewrite the transcription. (Works with any service.)</string>
-
-    <string name="titleMaxHypotheses">Recognition hypotheses</string>
-    <string name="summaryMaxHypotheses">Maximum number of returned recognition hypotheses. Depends also on the used service.</string>
-
-    <!-- RecognizerIntent activity -->
-    <string name="buttonSpeak">Tap &amp; Speak</string>
-    <string name="buttonImeSpeak">Tap &amp; Speak</string>
-    <string name="buttonImeStop">Speak now! Tap when finished</string>
-    <string name="buttonImeStopByPause">Speak now! Pause when finished</string>
-    <string name="buttonYes">Yes</string>
-    <string name="buttonNo">No</string>
-    <string name="buttonOk">OK</string>
     <string name="buttonGoToSettings">Go to settings</string>
     <string name="buttonCancel">Cancel</string>
     <string name="buttonApply">Apply</string>
     <string name="buttonScan">Scan</string>
     <string name="buttonUseDefault1">Default 1</string>
     <string name="buttonUseDefault2">Default 2</string>
-    <string name="statusImeTranscribing">Still transcribing…</string>
-    <string name="statusServerStatus" translatable="false">…</string>
 
     <string name="tvAbout">&lt;p>%1$s is an app that offers a speech-to-text service to other apps, in particular to Kõnele.
+        &lt;p>Service based on the Kaldi GStreamer server. The server URL can be changed. The default server supports Estonian and fast/accurate recognition.
+        &lt;p>For more information, see &lt;a href="http://phon.ioc.ee">http://phon.ioc.ee&lt;/a>.
+        &lt;p>See also the &lt;a href="https://github.com/Kaljurand/K6nele-service/blob/master/privacy_policy.rst">privacy policy&lt;/a>.</string>
 
-&lt;p>Service based on the Kaldi GStreamer server. The server URL can be changed. The default server supports Estonian and fast/accurate recognition.
-
-        Both servers focus on &lt;b>Estonian speech recognition&lt;/b>, but both are based on a fully open-source stack that makes them easy to deploy
-        and customize for other languages.
-        For more information, see &lt;a href="http://phon.ioc.ee">http://phon.ioc.ee&lt;/a>.&lt;/p>
-        See also the &lt;a href="https://github.com/Kaljurand/K6nele/blob/master/privacy_policy.rst">privacy policy&lt;/a>.</string>
-
-    <string name="emptylistApps">No apps yet. This list will be automatically populated with the apps where you have used speech input.</string>
-    <string name="emptylistGrammars">No grammars. Add a new grammar via the Add-menu.</string>
-    <string name="emptylistServers">No servers. Add a new server via the Add-menu.</string>
-    <string name="emptylistRewrites">No rewrite rule tables. Add a table via the Add-menu or by exporting it from a spreadsheet app as a TSV-file.</string>
-    <string name="emptylistRewriteRules">No rewrite rules were found. Make sure the input file is in the correct format, i.e. the columns are tab-separated and the first line is a header.</string>
-    <string name="emptylistRewriteRulesFiltered">No rewrite rules were found under filter:\n%1$s</string>
-
-    <string name="emptylistClipboard">No buttons. Add and enable rewrite rules, which then become available here as buttons.</string>
-    <string name="toastForwardedMatches">Recognized: %1$s</string>
-    <string name="toastAssignGrammar">Assigned grammar: %1$s</string>
-    <string name="toastActivated">Activated: %1$s</string>
-    <string name="toastDeactivated">Deactivated: %1$s</string>
-    <string name="toastDeleted">Deleted: %1$s</string>
-    <string name="toastRequestedAudioFormatNotSupported">Requested audio format not supported: %1$s</string>
-    <string name="toastPlayingAudio">Playing the recorded audio: %1$s, %2$s, %3$d ms</string>
-    <string name="toastPlayingAudioDone">Done playing the audio</string>
-    <string name="errorRecognizerSettingsNotPresent">This service does not have a settings panel.</string>
-    <string name="errorRecognizerNotPresent">ERROR: There is no activity that provides speech recognition service.</string>
-    <string name="errorLoadRewrites">ERROR: Failed to load rewrite rules: %1$s</string>
-    <plurals name="statusLoadRewrites">
-        <item quantity="zero">No rules</item>
-        <item quantity="one">1 rule</item>
-        <item quantity="other">%d rules</item>
-    </plurals>
-    <plurals name="statusLoadRewritesFiltered">
-        <item quantity="zero">No rules (filtered)</item>
-        <item quantity="one">1 rule (filtered)</item>
-        <item quantity="other">%d rules (filtered)</item>
-    </plurals>
-    <plurals name="statusLoadRewritesErrors">
-        <item quantity="zero">No errors</item>
-        <item quantity="one">1 error</item>
-        <item quantity="other">%d errors</item>
-    </plurals>
-    <plurals name="subtitleRewritesSelector">
-        <item quantity="zero" />
-        <item quantity="other">%1$d out of %2$d active</item>
-    </plurals>
-
-    <string name="labelPermissionFetchUrl">fetch URL and run its content</string>
-    <string name="descriptionPermissionFetchUrl">Allows the app to download data from the internet and execute it as an activity by calling (the visually transparent) FetchUrlActivity.</string>
-
-    <!-- Error messages used in exceptions and toasts -->
-    <string name="exceptionMalformedUrl">ERROR: Malformed URL</string>
-    <string name="errorFailedLaunchApp">ERROR: App cannot be launched or is not installed (anymore): %1$s</string>
-    <string name="errorFailedPlayAudio">ERROR: Failed to play the recorded audio: %1$s, %2$s</string>
-
-    // SpeechRecognizer error messages (9) shown in the IME
-    <string name="errorImeResultAudioError">audio recording failed</string>
-    <string name="errorImeResultNetworkError">server not reachable</string>
-    <string name="errorImeResultNetworkTimeoutError">network connection timeout</string>
-    <string name="errorImeResultRecognizerBusy">server is overloaded</string>
-    <string name="errorImeResultSpeechTimeout">no speech input detected</string>
-    <string name="errorImeResultNoMatch">no transcription found</string>
-    <string name="errorImeResultInsufficientPermissions">insufficient permissions</string>
-    <string name="errorImeResultClientError">general app error</string>
-    <string name="errorImeResultServerError">recognizer server error</string>
-
-    <string name="errorResultAudioError">Audio recording failed. Maybe another app is currently recording.</string>
-    <string name="errorResultNetworkError">Server not reachable. The internet connection is broken or the server is down.</string>
-    <string name="errorResultClientError">General client error</string>
-    <string name="errorResultServerError">Recognizer server error</string>
-    <string name="errorResultNoMatch">Transcription was not found for the recorded speech. Please try again!</string>
-    <string name="errorResultCanceled">Canceled</string>
-    <string name="errorCantCreateRecorder">ERROR: Failed to create an audio recorder</string>
-    <string name="errorFailedGetGrammarUrl">ERROR: Failed to obtain the grammar URL</string>
     <string name="errorFailedGetServerUrl">ERROR: Failed to obtain the server URL</string>
-    <string name="errorNetworkUndefined">ERROR: Network IP address undefined</string>
-    <string name="errorFailedGetCurrentInputConnection">ERROR: No currently active InputConnection that is bound to the input method</string>
-    <string name="confirmDeleteEntry">Are you sure you want to delete entry \"%1$s\"?</string>
-    <string name="confirmRemoveGrammar">Are you sure you do not want to set/override this app\'s grammar?</string>
-    <string name="confirmRemoveServer">Are you sure you want to use the default server in this app?</string>
-    <string name="confirmRename">Rename</string>
-    <string name="confirmDelete">Are you sure you want to delete \"%1$s\"?</string>
-    <!-- These are phrased as declarations, because they can be done without confirmation. -->
-    <string name="taskPrefRemove">Removing Kõnele preference \"%1$s\"</string>
-    <string name="taskPrefPut">Changing Kõnele preference \"%1$s\" to \"%2$s\"</string>
-    <string name="taskPrefPutUrl">Changing Kõnele preference \"%1$s\" to the content of the URL \"%2$s\"</string>
-    <string name="dialogTitleChangeGrammarName">Change the name</string>
-    <string name="dialogTitleChangeGrammarLang">Change the target language</string>
-    <string name="dialogTitleChangeGrammarUrl">Change the grammar</string>
-    <string name="dialogTitleNewGrammar">Add a new grammar URL</string>
-    <string name="dialogTitleChangeServer">Change the server</string>
-    <string name="dialogTitleNewServer">Add a new server URL</string>
-    <string name="dialogTitleHypotheses">Did you mean &#8230;</string>
-    <string name="cmAppAssignGrammar">Assign grammar</string>
-    <string name="cmAppRemoveGrammar">Remove grammar</string>
-    <string name="cmAppAssignServer">Assign server</string>
-    <string name="cmAppRemoveServer">Remove server</string>
-    <string name="cmAppDelete">Delete</string>
-    <string name="cmGrammarView">View/download content</string>
-    <string name="cmGrammarEditName">Change name</string>
-    <string name="cmGrammarEditLang">Change target language</string>
-    <string name="cmGrammarEditUrl">Change URL</string>
-    <string name="cmGrammarDelete">Delete</string>
-    <string name="cmServerEdit">Change URL</string>
-    <string name="cmServerDelete">Delete</string>
-    <!-- General menu items -->
-    <string name="cmShare">Share as TSV</string>
-    <string name="cmSendBase64">Share as base64 URI</string>
-    <string name="cmTest">Test</string>
-    <string name="cmRename">Rename</string>
-    <string name="cmDelete">Delete</string>
-    <string name="menuAppsSort">Sort …</string>
-    <string name="menuAppsSortByName">by package name</string>
-    <string name="menuAppsSortByCount">by usage frequency</string>
-    <string name="menuAppsSortByGrammar">by grammar URL</string>
-    <string name="menuGrammarsAdd">Add</string>
-    <string name="menuServersAdd">Add</string>
-    <string name="menuAbout">About</string>
-    <string name="menuHelp">Help</string>
-    <string name="menuRewritesAdd">Load rewrite rules from a tsv-file</string>
-    <string name="menuRewritesHelp">Help page with links to examples</string>
-    <string name="menuDemoGrammarAssign">Assign grammar</string>
-    <string name="promptSearch">Speak a web search query</string>
-    <string name="labelActivityEncoderListDemo">Audio encoders</string>
-    <string name="labelActivityImeListDemo">Voice IMEs</string>
-    <string name="buttonApplyDeveloperDefaults">Apply developer defaults</string>
-    <string name="buttonLaunchRewrites">Open rewrite rule tables</string>
 
-    <!-- Content description of images and buttons -->
-    <string name="cdMicrophone">Press this button and speak</string>
-    <string name="cdAppIcon">App icon</string>
-    <string name="cdServiceIcon">Service icon</string>
-    <string name="cdChangeInputMethod">Change input method</string>
-    <string name="cdGo">Launch search</string>
-    <string name="cdSettings">Kõnele settings</string>
-    <string name="cdImeDelete">Delete previous character</string>
-    <string name="cdImeNewline">Insert a newline</string>
+    <string name="errorNetworkUndefined">ERROR: Network IP address undefined</string>
+
     <string name="cdScan">Scan the (local) network and click through the found servers to try to replace the service address.</string>
 
     <string name="promptPermissionRationale">The audio recording permission is essential for Kõnele,
         please reconsider granting this permission.</string>
-
-    <!-- Entries for the database, both apos and its escape character need escaping. -->
-    <string name="entryGrammarName1">[unrestricted input]</string>
-    <string name="entryGrammarDesc1">This grammar can be assigned to apps, where you always want to use unrestricted input regardless of the app\'\'s own settings</string>
-
-    <string name="fileFormDemo" translatable="false">file:///android_asset/form.html</string>
-
-    <!-- TODO: make separate docs for English -->
-    <string name="urlDoc" translatable="false">http://kaljurand.github.io/K6nele/docs/et/user_guide.html</string>
-    <string name="urlRewritesDoc" translatable="false">http://kaljurand.github.io/K6nele/docs/et/rewrites.html</string>
 
     <string name="defaultAudioFormat" translatable="false">audio/x-raw</string>
 
@@ -258,86 +60,4 @@
         <item>audio/x-flac</item>
     </string-array>
 
-    <string-array name="entriesAutoStopAfterTime">
-        <item>2 sec</item>
-        <item>5 sec</item>
-        <item>10 sec</item>
-        <item>20 sec</item>
-        <item>30 sec</item>
-    </string-array>
-
-    <string-array name="entriesRecordingRate" translatable="false">
-        <!-- <item>8 kHz</item> -->
-        <item>11 kHz</item>
-        <item>16 kHz</item>
-        <item>22 kHz</item>
-        <item>44 kHz</item>
-    </string-array>
-
-    <!-- TODO: convert to integer -->
-    <string name="defaultRecordingRate" translatable="false">16000</string>
-
-    <!-- TODO: convert to integer-array -->
-    <string-array name="valuesRecordingRate" translatable="false">
-        <!-- <item>8000</item> -->
-        <item>11025</item>
-        <item>16000</item>
-        <item>22050</item>
-        <item>44100</item>
-    </string-array>
-
-    <!-- When making changes here, you need to change the UI labels as well.
-    Note also that none of the languages and services are
-    initially selected in the UI, independent of what is selected here.
-    We currently use the same language/service for both UIs. -->
-    <string-array name="defaultImeCombos" translatable="false">
-        <item>ee.ioc.phon.android.speak/.service.WebSocketRecognitionService;et-EE</item>
-    </string-array>
-    <string name="emptylistImeCombos">Currently using Estonian and Kõnele (fast recognition). Tap here to add or change languages and services.</string>
-
-    <string-array name="defaultCombos" translatable="false">
-        <item>ee.ioc.phon.android.speak/.service.WebSocketRecognitionService;et-EE</item>
-        <!-- <item>ee.ioc.phon.android.speak/.service.HttpRecognitionService;et-EE</item> -->
-    </string-array>
-    <string name="emptylistCombos">@string/emptylistImeCombos</string>
-
-    <!--
-    Set of recognizer service/language combos that we do not want to show for technical reasons.
-    This list can also contain service names to exclude the whole service with all its languages.
-    -->
-    <string-array name="defaultImeCombosExcluded" translatable="false">
-        <item>ee.ioc.phon.android.speak/.service.WebSocketRecognitionService;en-US</item>
-        <!--
-        <item>com.google.android.googlequicksearchbox/com.google.android.voicesearch.serviceapi.GoogleRecognitionService</item>
-        <item>ee.ioc.phon.android.speak/.service.HttpRecognitionService</item>
-        -->
-    </string-array>
-
-    <string-array name="defaultCombosExcluded" translatable="false">
-        <item>ee.ioc.phon.android.speak/.service.WebSocketRecognitionService;en-US</item>
-    </string-array>
-
-    <string-array name="entriesImeMode">
-        <item>Left swipe deletes, right swipe adds newline</item>
-        <item>Swiping moves cursor</item>
-    </string-array>
-
-    <!-- TODO: convert to integer-array -->
-    <string-array name="valuesImeMode" translatable="false">
-        <item>1</item>
-        <item>2</item>
-    </string-array>
-
-    <!-- Just for testing, won't appear in the product. -->
-    <string name="testComboLabel" translatable="false">English (United States) · Kõnele (grammar support)</string>
-    <string name="testComboLabels" translatable="false">en-US(Kg) · en-X(G) · et-EE(Kf) · et-EE(Kg) · de-DE (G) · +/-</string>
-
-    <string name="promptDemo">Say e.g.: %1$s</string>
-    <string-array name="phrasesDemo" translatable="false">
-        <item>Kuuuurija istus töööös jääääres.</item>
-        <item>Aoäia õe uue oaõieaia õueaua ööau.</item>
-        <item>Üheksasada üheksakümmend üheksa tuhat üheksasada üheksakümmend üheksa ööd</item>
-        <item>Lampjalgadega stampvambilgi on rambikramp.</item>
-        <item>Anna õlu üle Ülo õe õla.</item>
-    </string-array>
 </resources>

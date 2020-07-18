@@ -20,8 +20,8 @@
         android:title="@string/titleAutoStopAfterPause"
         app:iconSpaceReserved="false" />
     <CheckBoxPreference
-        android:defaultValue="@bool/defaultImeAudioCues"
-        android:key="@string/keyImeAudioCues"
+        android:defaultValue="@bool/defaultWsAudioCues"
+        android:key="@string/keyWsAudioCues"
         android:summary="@string/summaryAudioCues"
         android:title="@string/titleAudioCues"
         app:iconSpaceReserved="false" />
@@ -29,7 +29,7 @@
         android:defaultValue="@string/defaultAudioFormat"
         android:entries="@array/entriesAudioFormat"
         android:entryValues="@array/valuesAudioFormat"
-        android:key="@string/keyImeAudioFormat"
+        android:key="@string/keyWsAudioFormat"
         android:summary="@string/summaryAudioFormat"
         android:title="@string/titleAudioFormat"
         app:iconSpaceReserved="false" />
