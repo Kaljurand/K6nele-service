@@ -1,0 +1,121 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+dependencies {
+    implementation project(':speechutils:app')
+    // TODO: use Android's JSON library instead
+    implementation 'com.googlecode.json-simple:json-simple:1.1'
+    implementation 'com.koushikdutta.async:androidasync:2.2.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.preference:preference:1.1.1'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    //implementation 'androidx.activity:activity:1.2.0-alpha06'
+    implementation 'com.google.android.material:material:1.1.0'
+}
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+
+    // API level 7: MediaRecorder.AudioSource.VOICE_RECOGNITION
+    // API level 8: android.speech.SpeechRecognizer and android.speech.RecognitionService
+    // API level 14: @android:style/Theme.DeviceDefault
+    defaultConfig {
+        applicationId 'ee.ioc.phon.android.k6neleservice'
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 2
+        versionName '0.0.02'
+        vectorDrawables.useSupportLibrary = true
+        // Keep only en and et resources
+        resConfigs "en", "et"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
+    signingConfigs {
+        release {
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFile getDefaultProguardFile('proguard-android-optimize.txt')
+            proguardFile 'proguard.cfg'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    lintOptions {
+        // TODO: in the future check for Kotlin-Java interop
+        //check 'Interoperability'
+        disable 'ResourceType', 'AppLinkUrlError', 'EllipsizeMaxLines', 'RtlSymmetry', 'Autofill'
+    }
+
+    buildFeatures {
+        viewBinding {
+            enabled = true
+        }
+    }
+
+}
+
+
+if (project.hasProperty('storePassword') &&
+        project.hasProperty('keyPassword')) {
+    android.signingConfigs.release.storeFile = file(System.getenv("KEYSTORE"))
+    android.signingConfigs.release.keyAlias = System.getenv("KEY_ALIAS")
+    android.signingConfigs.release.storePassword = storePassword
+    android.signingConfigs.release.keyPassword = keyPassword
+} else {
+    android.buildTypes.release.signingConfig = null
+}
+
+
+task deploy {
+    doLast {
+        description 'Copy the APK and the ProGuard mapping file to the deploy directory'
+
+        def deploy_dir = System.getenv('APK_DEPLOY_DIR')
+
+        def version = android.defaultConfig.versionName
+
+        def name = 'K6nele-service'
+
+        def outputs = 'build/outputs/'
+        def apk1 = outputs + 'apk/release/app-release.apk'
+        def apk2 = "${deploy_dir}${name}-${version}.apk"
+        def mapping1 = outputs + 'mapping/release/mapping.txt'
+        def mapping2 = "${deploy_dir}${name}-mapping-${version}.txt"
+
+        exec {
+            commandLine 'cp', '--verbose', apk1, apk2
+        }
+
+        exec {
+            commandLine 'cp', '--verbose', mapping1, mapping2
+        }
+
+        exec {
+            commandLine 'ls', '-l', deploy_dir
+        }
+
+        println "adb uninstall ${android.defaultConfig.applicationId}"
+        println "adb install ${apk2}"
+    }
+}
