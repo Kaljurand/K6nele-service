@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.K6nele" parent="Theme.AppCompat.DayNight">
+        <item name="colorAccent">@color/accent</item>
+    </style>
+
+    <style name="Theme.K6nele.Dialog" parent="Theme.AppCompat.DayNight.Dialog">
+        <item name="colorAccent">@color/accent</item>
+    </style>
+
+    <style name="Theme.K6nele.Dialog.NoActionBar" parent="Theme.AppCompat.DayNight.Dialog">
+        <item name="colorAccent">@color/accent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.K6nele.Translucent" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+
+</resources>
