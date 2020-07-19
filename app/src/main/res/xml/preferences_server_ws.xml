@@ -2,6 +2,16 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <Preference
+        android:key="@string/keyAppInfo"
+        android:summary="@string/summaryAppInfo"
+        android:title="@string/titleAppInfo"
+        app:iconSpaceReserved="false">
+        <intent
+            android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+            android:data="package:ee.ioc.phon.android.k6neleservice" />
+    </Preference>
+
+    <Preference
         android:key="@string/keyWsServer"
         android:summary="@string/defaultWsServer"
         android:title="@string/titleWsServer"
@@ -10,6 +20,16 @@
             android:targetClass="ee.ioc.phon.android.k6neleservice.activity.RecognitionServiceWsUrlActivity"
             android:targetPackage="ee.ioc.phon.android.k6neleservice" />
     </Preference>
+
+    <EditTextPreference
+        android:defaultValue="@string/defaultLocales"
+        android:dialogMessage="@string/dialogMessageLocales"
+        android:inputType="text"
+        android:key="@string/keyLocales"
+        android:summary="@string/defaultLocales"
+        android:title="@string/titleLocales"
+        app:iconSpaceReserved="false" />
+
     <CheckBoxPreference
         android:defaultValue="@bool/defaultWsAutoStopAfterPause"
         android:key="@string/keyWsAutoStopAfterPause"
@@ -30,14 +50,4 @@
         android:summary="@string/summaryAudioFormat"
         android:title="@string/titleAudioFormat"
         app:iconSpaceReserved="false" />
-
-    <Preference
-        android:key="@string/keyAppInfo"
-        android:summary="@string/summaryAppInfo"
-        android:title="@string/titleAppInfo"
-        app:iconSpaceReserved="false">
-        <intent
-            android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
-            android:data="package:ee.ioc.phon.android.k6neleservice" />
-    </Preference>
 </PreferenceScreen>

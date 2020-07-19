@@ -13,4 +13,6 @@
     <!-- TODO: remove this -->
     <string name="defaultHttpServer" translatable="false">http://bark.phon.ioc.ee/speech-api/v1/recognize</string>
 
+    <string name="defaultLocales" translatable="false">et-EE</string>
+
 </resources>

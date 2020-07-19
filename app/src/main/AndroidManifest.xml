@@ -92,6 +92,15 @@
                 android:name="android.speech"
                 android:resource="@xml/recognition_service_ws" />
         </service>
+
+        <!-- This receiver is exported, i.e. any app can ask which languages K6nele-service supports. -->
+        <receiver
+            android:name=".receiver.GetLanguageDetailsReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.speech.action.GET_LANGUAGE_DETAILS" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

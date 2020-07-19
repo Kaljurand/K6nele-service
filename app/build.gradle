@@ -7,11 +7,11 @@ dependencies {
     implementation 'com.googlecode.json-simple:json-simple:1.1'
     implementation 'com.koushikdutta.async:androidasync:2.2.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.preference:preference:1.1.1'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     //implementation 'androidx.activity:activity:1.2.0-alpha06'
-    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.google.android.material:material:1.2.0'
 }
 
 android {
@@ -24,8 +24,8 @@ android {
         applicationId 'ee.ioc.phon.android.k6neleservice'
         minSdkVersion 16
         targetSdkVersion 30
-        versionCode 5
-        versionName '0.0.05'
+        versionCode 6
+        versionName '0.0.06'
         vectorDrawables.useSupportLibrary = true
         // Keep only en and et resources
         resConfigs "en", "et"
@@ -68,9 +68,7 @@ android {
     }
 
     buildFeatures {
-        viewBinding {
-            enabled = true
-        }
+        viewBinding true
     }
 
 }

@@ -7,6 +7,9 @@
     <string name="labelActivityAbout">Info</string>
     <string name="labelRecognitionServiceWs">Kõnele teenus</string>
 
+    <string name="titleLocales">Serveri toetatud lokaaled</string>
+    <string name="dialogMessageLocales">Komadega eraldatud nimekiri keeltest/regioonidest, mida server toetab, nt \"et-EE, vro-EE, en-US\"</string>
+
     <string name="titleAutoStopAfterPause">Autostopp pärast pausi</string>
     <string name="summaryAutoStopAfterPause">Lõpeta lindistamine pärast paarisekundist pausi</string>
 

@@ -142,7 +142,7 @@ public class PreferencesRecognitionServiceWs extends AppCompatActivity {
         @Override
         public void onStart() {
             super.onStart();
-            setSummary(getPreferenceScreen().getSharedPreferences(), getResources());
+            setSummaries(getPreferenceScreen().getSharedPreferences(), getResources());
         }
 
         @Override
@@ -183,12 +183,17 @@ public class PreferencesRecognitionServiceWs extends AppCompatActivity {
             }
         }
 
-        private void setSummary(SharedPreferences prefs, Resources res) {
+        private void setSummaries(SharedPreferences prefs, Resources res) {
             int key = R.string.keyWsServer;
-            final Preference pref = findPreference(getString(key));
+            Preference pref = findPreference(getString(key));
             if (pref != null) {
                 final String urlSpeech = PreferenceUtils.getPrefString(prefs, res, key, R.string.defaultWsServer);
                 pref.setSummary(String.format(getString(R.string.summaryWsServer), urlSpeech));
+            }
+            key = R.string.keyLocales;
+            pref = findPreference(getString(key));
+            if (pref != null) {
+                pref.setSummary(PreferenceUtils.getPrefString(prefs, res, key, R.string.defaultLocales));
             }
         }
     }

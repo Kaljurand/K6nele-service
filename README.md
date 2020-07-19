@@ -1,9 +1,9 @@
 Kõnele
 ======
 
-Kõnele service is an Android app that offers a speech-to-text service to other apps, in particular to Kõnele.
-It implements [SpeechRecognizer](http://developer.android.com/reference/android/speech/SpeechRecognizer.html),
-backed by an open source speech recognition server software - <https://github.com/alumae/kaldi-gstreamer-server>.
+Kõnele service is an Android app that offers a speech-to-text service to other apps, in particular to Kõnele (<https://github.com/Kaljurand/K6nele>).
+It implements Android's [SpeechRecognizer](http://developer.android.com/reference/android/speech/SpeechRecognizer.html) interface using
+an open source speech recognition server software <https://github.com/alumae/kaldi-gstreamer-server>.
 
 [<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
      alt="Get it on Google Play"

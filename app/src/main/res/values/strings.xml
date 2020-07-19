@@ -8,7 +8,7 @@
     <string name="urlDoc" translatable="false">https://github.com/Kaljurand/K6nele-service</string>
 
     <string name="titleAppInfo">App info</string>
-    <string name="summaryAppInfo">View/change permissions, clear cache, etc.</string>
+    <string name="summaryAppInfo">View and change permissions, clear cache, etc.</string>
 
     <string name="labelActivityAbout">About Kõnele service</string>
     <string name="labelRecognitionServiceWs">Kõnele service</string>
@@ -16,6 +16,8 @@
 
     <string name="summaryServiceWs">Service based on the Kaldi GStreamer server. The server URL can be changed. The default server supports Estonian and fast/accurate recognition.</string>
 
+    <string name="titleLocales">Server locales</string>
+    <string name="dialogMessageLocales">Comma-separated list of locales supported by the server, e.g. \"et-EE, vro-EE, en-US\"</string>
     <string name="titleAutoStopAfterPause">Auto stop after pause</string>
     <string name="summaryAutoStopAfterPause">Stop recording after a few seconds of pause</string>
 
@@ -52,7 +54,7 @@
 
     <string name="cdScan">Scan the (local) network and click through the found servers to try to replace the service address.</string>
 
-    <string name="promptPermissionRationale">⚠️ There is currently no permission to record audio. Please grant this permission, because it is essential for this service.</string>
+    <string name="promptPermissionRationale">⚠️ There is currently no microphone permission. Please grant this permission, because recording audio is essential for this service.</string>
 
     <string name="defaultAudioFormat" translatable="false">audio/x-raw</string>
 
