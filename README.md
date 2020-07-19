@@ -36,15 +36,11 @@ Build the app
 
     ./gradlew assemble
 
+If you have access to a release keystore then add these lines to `gradle.properties`:
 
-If you have access to a release keystore then
-
-  - point to its location by setting the environment variable `KEYSTORE`
-  - set `KEY_ALIAS` to the key alias
-  - add these lines to `gradle.properties`:
-
-        storePassword=<password1>
-        keyPassword=<password2>
-
+    storeFilename=</path/to/store.jks>
+    storePassword=<storePassword>
+    keyAlias=<keyAlias>
+    keyPassword=<keyPassword>
 
 The (signed and unsigned) APKs will be generated into `app/build/outputs/apk/`.

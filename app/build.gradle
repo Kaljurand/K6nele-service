@@ -76,13 +76,13 @@ android {
 }
 
 
-if (project.hasProperty('storePassword') &&
-        project.hasProperty('keyPassword')) {
-    android.signingConfigs.release.storeFile = file(System.getenv("KEYSTORE"))
-    android.signingConfigs.release.keyAlias = System.getenv("KEY_ALIAS")
+if (project.hasProperty('storeFilename') && project.hasProperty('storePassword') && project.hasProperty('keyAlias') && project.hasProperty('keyPassword')) {
+    android.signingConfigs.release.storeFile = file(storeFilename)
     android.signingConfigs.release.storePassword = storePassword
+    android.signingConfigs.release.keyAlias = keyAlias
     android.signingConfigs.release.keyPassword = keyPassword
 } else {
+    println "WARNING: The release will not be signed"
     android.buildTypes.release.signingConfig = null
 }
 
