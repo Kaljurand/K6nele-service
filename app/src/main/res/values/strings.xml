@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="labelApp" translatable="false">Kõnele service</string>
+    <string name="descriptionApp" translatable="false">speech-to-text service for Android apps</string>
+    <string name="hintLocalServer" translatable="false">10.0.0.2</string>
+    <string name="statusServerStatus" translatable="false">…</string>
+    <string name="summaryWsServer" translatable="false">%1$s</string>
+    <string name="urlDoc" translatable="false">https://github.com/Kaljurand/K6nele-service</string>
+
+    <string name="titleAppInfo">App info</string>
+    <string name="summaryAppInfo">View/change permissions, clear cache, etc.</string>
+
+    <string name="labelActivityAbout">About Kõnele service</string>
+    <string name="labelRecognitionServiceWs">Kõnele service</string>
+    <string name="labelActivityPreferencesRecognitionServiceWs">@string/labelRecognitionServiceWs</string>
+
+    <string name="summaryServiceWs">Service based on the Kaldi GStreamer server. The server URL can be changed. The default server supports Estonian and fast/accurate recognition.</string>
+
+    <string name="titleAutoStopAfterPause">Auto stop after pause</string>
+    <string name="summaryAutoStopAfterPause">Stop recording after a few seconds of pause</string>
+
+
+    <string name="titleAudioFormat">Audio format</string>
+    <string name="summaryAudioFormat">%1$s\n(Using a non-raw format results in 2x less network traffic. Might not work on all devices.)</string>
+    <string name="titleAudioCues">Play audio cues</string>
+    <string name="summaryAudioCues">Beep before and after recording</string>
+    <string name="titleWsServer">Server URL</string>
+
+    <plurals name="summaryWsServerWithStatus">
+        <item quantity="one">%d slot available</item>
+        <item quantity="other">%d slots available</item>
+    </plurals>
+    <string name="summaryWsServerWithStatusError" translatable="false">%1$s</string>
+
+    <string name="buttonCancel">Cancel</string>
+    <string name="buttonApply">Apply</string>
+    <string name="buttonScan">Scan</string>
+    <string name="buttonUseDefault1">Default 1</string>
+    <string name="buttonUseDefault2">Default 2</string>
+
+    <string name="menuAbout">About</string>
+    <string name="menuHelp">Help</string>
+
+    <string name="tvAbout">&lt;p>%1$s is an app that offers a speech-to-text service to other apps, in particular to Kõnele.
+        &lt;p>Service based on the Kaldi GStreamer server. The server URL can be changed. The default server supports Estonian and fast/accurate recognition.
+        &lt;p>For more information, see &lt;a href="http://phon.ioc.ee">http://phon.ioc.ee&lt;/a>.
+        &lt;p>See also the &lt;a href="https://github.com/Kaljurand/K6nele-service/blob/master/privacy_policy.rst">privacy policy&lt;/a>.</string>
+
+    <string name="errorFailedGetServerUrl">ERROR: Failed to obtain the server URL</string>
+
+    <string name="errorNetworkUndefined">ERROR: Network IP address undefined</string>
+
+    <string name="cdScan">Scan the (local) network and click through the found servers to try to replace the service address.</string>
+
+    <string name="promptPermissionRationale">⚠️ There is currently no permission to record audio. Please grant this permission, because it is essential for this service.</string>
+
+    <string name="defaultAudioFormat" translatable="false">audio/x-raw</string>
+
+    <string-array name="entriesAudioFormat" translatable="false">
+        <item>raw</item>
+        <item>FLAC</item>
+    </string-array>
+
+    <string-array name="valuesAudioFormat" translatable="false">
+        <item>audio/x-raw</item>
+        <item>audio/x-flac</item>
+    </string-array>
+
+</resources>

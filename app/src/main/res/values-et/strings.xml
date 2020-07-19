@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="titleAppInfo">Süsteemsed seaded</string>
+    <string name="summaryAppInfo">Lubade, salvestusruumi jms seadistamine</string>
+
+    <string name="labelActivityAbout">Info</string>
+    <string name="labelRecognitionServiceWs">Kõnele teenus</string>
+
+    <string name="titleAutoStopAfterPause">Autostopp pärast pausi</string>
+    <string name="summaryAutoStopAfterPause">Lõpeta lindistamine pärast paarisekundist pausi</string>
+
+    <string name="titleAudioCues">Helisignaalid</string>
+    <string name="summaryAudioCues">Anna lindistamise algusest ja lõpust märku lühikese
+		helisignaaliga</string>
+    <string name="buttonCancel">Loobu</string>
+    <string name="buttonUseDefault1">Vaikeserver 1</string>
+    <string name="buttonUseDefault2">Vaikeserver 2</string>
+
+    <string name="menuAbout">Info</string>
+    <string name="menuHelp">Kasutusjuhend</string>
+
+
+    <string name="tvAbout">&lt;p>&lt;b>%1$s&lt;/b> on kõnetuvastusteenus Androidi rakendustele, eelkõige Kõnele rakendusele.&lt;/p>
+
+        &lt;p>Vaikimisi kasutab teenus TTÜ Küberneetika Instituudi foneetika ja kõnetehnoloogia labori eesti keele
+		kõnetuvastusserverit, vt &lt;a href="http://phon.ioc.ee">http://phon.ioc.ee&lt;/a>.&lt;/p>
+
+        &lt;p>Teenus väljastab tuvastustulemuse juba rääkimise ajal ja ei sea
+        kõnesisendi pikkusele mingit piirangut.&lt;/p>
+
+		&lt;p>Põhjalikum
+		dokumentatsioon ja lähtekood on
+		&lt;a
+		href="https://github.com/Kaljurand/K6nele-service">%1$s veebilehel&lt;/a>.
+        Kasutajaandmete kaitse kohta lugege &lt;a href="https://github.com/Kaljurand/K6nele-service/blob/master/privacy_policy.rst">siit&lt;/a>.&lt;/p>&lt;/p></string>
+
+    <string name="errorNetworkUndefined">VIGA: võrgu IP aadress pole määratud</string>
+
+    <string name="promptPermissionRationale">⚠️ Hetkel puudub luba heli salvestada, mis on selle teenuse jaoks hädavajalik,
+        palun andke see luba.</string>
+
+    <string name="errorFailedGetServerUrl">VIGA: serveri aadressi valimine luhtus</string>
+    <plurals name="summaryWsServerWithStatus">
+        <item quantity="one">%d vaba slott</item>
+        <item quantity="other">%d vaba slotti</item>
+    </plurals>
+    <string name="summaryServiceWs">Kaldi GStreamer serveri põhine teenus. Serveriaadressi on võimalik muuta. Vaikeserver toetab eesti keelt ja kiiret/täpset tuvastust.</string>
+    <string name="labelActivityPreferencesRecognitionServiceWs">@string/labelRecognitionServiceWs</string>
+    <string name="titleWsServer">Serveriaadress</string>
+
+    <string name="summaryAudioFormat">%1$s\n(Mitte-raw formaadi kasutamine vähendab võrguliiklust 2 korda. Kõikidel seadmetel ei pruugi toimida.)</string>
+    <string name="titleAudioFormat">Audioformaat</string>
+
+    <string name="buttonApply">Rakenda</string>
+    <string name="buttonScan">Otsi</string>
+    <string name="cdScan">Otsi (koht)võrgust servereid, et asendada teenuse aadress mõne leitud serveri aadressiga.</string>
+
+</resources>

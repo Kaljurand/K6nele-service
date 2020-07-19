@@ -1,0 +1,3 @@
+[submodule "speechutils"]
+	path = speechutils
+	url = git@github.com:Kaljurand/speechutils.git

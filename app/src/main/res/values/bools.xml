@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Defaults. WebSocket-based service. -->
+    <bool name="defaultWsAutoStopAfterPause">true</bool>
+    <!-- Google always beeps and it cannot be switched off,
+thus, when using Google's service, the user would want to have the beep off anyway. -->
+    <bool name="defaultWsAudioCues">false</bool>
+
+</resources>

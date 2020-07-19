@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ee.ioc.phon.android.k6neleservice"
+    android:installLocation="auto">
+
+    <!-- Permission RECORD_AUDIO.
+    Used to record the speech input to be transcribed.
+    This is an essential permission for Kõnele. Because it is also a "dangerous" permission,
+    then Kõnele requests it as soon as the user starts the audio recorder.
+    -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- Permission INTERNET.
+    Used to reach the speech recognition server.
+    Non-dangerous permission, i.e. granted automatically at install time.
+    This is not needed when only using offline recognition services (e.g. wake up word triggers),
+    but unfortunately there is no way to enable/disable it at runtime.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- TODO: investigate if we need this permission (and enable it during runtime), to
+    mute the audio stream during recognition. -->
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+
+    <!-- Some Chromebooks don't support touch. Although not essential,
+     it's a good idea to explicitly include this declaration. -->
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <!-- <uses-feature android:name="android.hardware.type.watch" /> -->
+
+    <application
+        android:allowBackup="true"
+        android:description="@string/descriptionApp"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/labelApp"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.K6nele">
+
+        <activity
+            android:name=".activity.AboutActivity"
+            android:label="@string/labelActivityAbout"
+            android:parentActivityName=".activity.PreferencesRecognitionServiceWs"
+            android:theme="@style/Theme.K6nele" />
+
+
+        <activity
+            android:name=".activity.PreferencesRecognitionServiceWs"
+            android:exported="true"
+            android:label="@string/labelActivityPreferencesRecognitionServiceWs">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".activity.RecognitionServiceWsUrlActivity"
+            android:label="@string/titleWsServer"
+            android:parentActivityName=".activity.PreferencesRecognitionServiceWs"
+            android:windowSoftInputMode="stateUnchanged" />
+
+        <!-- This service is exported, i.e. any app can call K6nele, but needs to have recording-permission. -->
+        <!-- TODO: why can't I specify more permissions here? -->
+        <service
+            android:name=".service.WebSocketRecognitionService"
+            android:description="@string/summaryServiceWs"
+            android:exported="true"
+            android:foregroundServiceType="microphone"
+            android:icon="@drawable/ic_service"
+            android:label="@string/labelRecognitionServiceWs"
+            android:permission="android.permission.RECORD_AUDIO">
+            <intent-filter>
+
+                <!-- The constant value is defined at RecognitionService.SERVICE_INTERFACE. -->
+                <action android:name="android.speech.RecognitionService" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.speech"
+                android:resource="@xml/recognition_service_ws" />
+        </service>
+    </application>
+
+</manifest>

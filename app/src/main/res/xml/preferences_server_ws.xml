@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference
+        android:key="@string/keyWsServer"
+        android:summary="@string/defaultWsServer"
+        android:title="@string/titleWsServer"
+        app:iconSpaceReserved="false">
+        <intent
+            android:targetClass="ee.ioc.phon.android.k6neleservice.activity.RecognitionServiceWsUrlActivity"
+            android:targetPackage="ee.ioc.phon.android.k6neleservice" />
+    </Preference>
+    <CheckBoxPreference
+        android:defaultValue="@bool/defaultWsAutoStopAfterPause"
+        android:key="@string/keyWsAutoStopAfterPause"
+        android:summary="@string/summaryAutoStopAfterPause"
+        android:title="@string/titleAutoStopAfterPause"
+        app:iconSpaceReserved="false" />
+    <CheckBoxPreference
+        android:defaultValue="@bool/defaultWsAudioCues"
+        android:key="@string/keyWsAudioCues"
+        android:summary="@string/summaryAudioCues"
+        android:title="@string/titleAudioCues"
+        app:iconSpaceReserved="false" />
+    <ListPreference
+        android:defaultValue="@string/defaultAudioFormat"
+        android:entries="@array/entriesAudioFormat"
+        android:entryValues="@array/valuesAudioFormat"
+        android:key="@string/keyWsAudioFormat"
+        android:summary="@string/summaryAudioFormat"
+        android:title="@string/titleAudioFormat"
+        app:iconSpaceReserved="false" />
+
+    <Preference
+        android:key="@string/keyAppInfo"
+        android:summary="@string/summaryAppInfo"
+        android:title="@string/titleAppInfo"
+        app:iconSpaceReserved="false">
+        <intent
+            android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+            android:data="package:ee.ioc.phon.android.k6neleservice" />
+    </Preference>
+</PreferenceScreen>
