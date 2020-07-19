@@ -28,7 +28,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 import ee.ioc.phon.android.k6neleservice.utils.Utils;
 import ee.ioc.phon.android.recsession.ChunkedWebRecSession;

@@ -40,7 +40,14 @@
         android:theme="@style/Theme.K6nele">
 
         <activity
-            android:name=".PreferencesRecognitionServiceWs"
+            android:name=".activity.AboutActivity"
+            android:label="@string/labelActivityAbout"
+            android:parentActivityName=".activity.PreferencesRecognitionServiceWs"
+            android:theme="@style/Theme.K6nele" />
+
+
+        <activity
+            android:name=".activity.PreferencesRecognitionServiceWs"
             android:exported="true"
             android:label="@string/labelActivityPreferencesRecognitionServiceWs">
             <intent-filter>
@@ -48,9 +55,7 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-        </activity>
 
-        <activity android:name=".activity.PermissionsRequesterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -62,7 +67,7 @@
         <activity
             android:name=".activity.RecognitionServiceWsUrlActivity"
             android:label="@string/titleWsServer"
-            android:parentActivityName=".PreferencesRecognitionServiceWs"
+            android:parentActivityName=".activity.PreferencesRecognitionServiceWs"
             android:windowSoftInputMode="stateUnchanged" />
 
         <!-- This service is exported, i.e. any app can call K6nele, but needs to have recording-permission. -->

@@ -5,7 +5,12 @@
     <string name="hintLocalServer" translatable="false">10.0.0.2</string>
     <string name="statusServerStatus" translatable="false">…</string>
     <string name="summaryWsServer" translatable="false">%1$s</string>
+    <string name="urlDoc" translatable="false">https://github.com/Kaljurand/K6nele-service</string>
 
+    <string name="titleAppInfo">App info</string>
+    <string name="summaryAppInfo">View/change permissions, clear cache, etc.</string>
+
+    <string name="labelActivityAbout">About Kõnele service</string>
     <string name="labelRecognitionServiceWs">Kõnele service</string>
     <string name="labelActivityPreferencesRecognitionServiceWs">@string/labelRecognitionServiceWs</string>
 
@@ -27,12 +32,14 @@
     </plurals>
     <string name="summaryWsServerWithStatusError" translatable="false">%1$s</string>
 
-    <string name="buttonGoToSettings">Go to settings</string>
     <string name="buttonCancel">Cancel</string>
     <string name="buttonApply">Apply</string>
     <string name="buttonScan">Scan</string>
     <string name="buttonUseDefault1">Default 1</string>
     <string name="buttonUseDefault2">Default 2</string>
+
+    <string name="menuAbout">About</string>
+    <string name="menuHelp">Help</string>
 
     <string name="tvAbout">&lt;p>%1$s is an app that offers a speech-to-text service to other apps, in particular to Kõnele.
         &lt;p>Service based on the Kaldi GStreamer server. The server URL can be changed. The default server supports Estonian and fast/accurate recognition.
@@ -45,8 +52,7 @@
 
     <string name="cdScan">Scan the (local) network and click through the found servers to try to replace the service address.</string>
 
-    <string name="promptPermissionRationale">The audio recording permission is essential for Kõnele,
-        please reconsider granting this permission.</string>
+    <string name="promptPermissionRationale">⚠️ There is currently no permission to record audio. Please grant this permission, because it is essential for this service.</string>
 
     <string name="defaultAudioFormat" translatable="false">audio/x-raw</string>
 

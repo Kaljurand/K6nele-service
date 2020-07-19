@@ -12,8 +12,5 @@
 
     <!-- TODO: remove this -->
     <string name="defaultHttpServer" translatable="false">http://bark.phon.ioc.ee/speech-api/v1/recognize</string>
-    <!--
-    <string name="defaultHttpServer" translatable="false">http://192.168.0.38:8080/client/dynamic/recognize</string>
--->
 
 </resources>

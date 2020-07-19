@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="titleAppInfo">Süsteemsed seaded</string>
+    <string name="summaryAppInfo">Lubade, salvestusruumi jms seadistamine</string>
+
+    <string name="labelActivityAbout">Info</string>
     <string name="labelRecognitionServiceWs">Kõnele teenus</string>
 
     <string name="titleAutoStopAfterPause">Autostopp pärast pausi</string>
@@ -9,35 +13,32 @@
     <string name="titleAudioCues">Helisignaalid</string>
     <string name="summaryAudioCues">Anna lindistamise algusest ja lõpust märku lühikese
 		helisignaaliga</string>
-    <string name="buttonGoToSettings">Seadista</string>
     <string name="buttonCancel">Loobu</string>
     <string name="buttonUseDefault1">Vaikeserver 1</string>
     <string name="buttonUseDefault2">Vaikeserver 2</string>
 
-    <string name="tvAbout">&lt;p>&lt;b>%1$s&lt;/b> on kõnetuvastusteenus Androidi rakendustele,
-        mis võimaldab kõne abil sooritada infootsingut, kirjutada e-kirju ja märkmeid, anda käske jne.&lt;/p>
+    <string name="menuAbout">Info</string>
+    <string name="menuHelp">Kasutusjuhend</string>
 
-        &lt;p>Kõnele toetab kõiki seadmes olevad tuvastusteenusi, mis on läbi Androidi avatud kõnetuvastusliidese
-        kasutatavad, ning lisab omalt poolt kaks teenust,
-        mis kasutavad kõne transkribeerimiseks vastavalt kahte veebiserverit.
-        Vaikimisi on nendeks TTÜ Küberneetika Instituudi foneetika ja kõnetehnoloogia labori eesti keele
-		kõnetuvastusserverid, vt &lt;a href="http://phon.ioc.ee">http://phon.ioc.ee&lt;/a>.
-        Seega, Kõnele kasutamine eeldab üldiselt internetiühenduse olemasolu,
-        laadides serverisse umbes 1 MB kõne poole minuti kohta.&lt;/p>
 
-        &lt;p>&lt;b>Kiire tuvastusega teenus&lt;/b> väljastab tuvastustulemuse juba rääkimise ajal ja ei sea
+    <string name="tvAbout">&lt;p>&lt;b>%1$s&lt;/b> on kõnetuvastusteenus Androidi rakendustele, eelkõige Kõnele rakendusele.&lt;/p>
+
+        &lt;p>Vaikimisi kasutab teenus TTÜ Küberneetika Instituudi foneetika ja kõnetehnoloogia labori eesti keele
+		kõnetuvastusserverit, vt &lt;a href="http://phon.ioc.ee">http://phon.ioc.ee&lt;/a>.&lt;/p>
+
+        &lt;p>Teenus väljastab tuvastustulemuse juba rääkimise ajal ja ei sea
         kõnesisendi pikkusele mingit piirangut.&lt;/p>
 
 		&lt;p>Põhjalikum
 		dokumentatsioon ja lähtekood on
 		&lt;a
-		href="http://kaljurand.github.io/K6nele/">%1$s veebilehel&lt;/a>.
-        Kasutajaandmete kaitse kohta lugege &lt;a href="https://github.com/Kaljurand/K6nele/blob/master/privacy_policy.rst">siit&lt;/a>.&lt;/p>&lt;/p></string>
+		href="https://github.com/Kaljurand/K6nele-service">%1$s veebilehel&lt;/a>.
+        Kasutajaandmete kaitse kohta lugege &lt;a href="https://github.com/Kaljurand/K6nele-service/blob/master/privacy_policy.rst">siit&lt;/a>.&lt;/p>&lt;/p></string>
 
     <string name="errorNetworkUndefined">VIGA: võrgu IP aadress pole määratud</string>
 
-    <string name="promptPermissionRationale">Heli salvestamise õigus on Kõnele jaoks hädavajalik,
-        palun andke see õigus.</string>
+    <string name="promptPermissionRationale">⚠️ Hetkel puudub luba heli salvestada, mis on selle teenuse jaoks hädavajalik,
+        palun andke see luba.</string>
 
     <string name="errorFailedGetServerUrl">VIGA: serveri aadressi valimine luhtus</string>
     <plurals name="summaryWsServerWithStatus">

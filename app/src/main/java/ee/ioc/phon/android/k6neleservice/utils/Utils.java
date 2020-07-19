@@ -17,20 +17,15 @@
 package ee.ioc.phon.android.k6neleservice.utils;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Build;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import ee.ioc.phon.android.k6neleservice.Log;
-import ee.ioc.phon.android.k6neleservice.R;
 
 /**
  * <p>Some useful static methods.</p>
@@ -40,27 +35,6 @@ import ee.ioc.phon.android.k6neleservice.R;
 public final class Utils {
 
     private Utils() {
-    }
-
-    /**
-     * Creates a non-cancelable dialog with two buttons, both finish the activity,
-     * one launches the given intent first.
-     * TODO: note that we explicitly set the dialog style. This is because if the caller activity's style
-     * is Theme.Translucent.NoTitleBar then the dialog is unstyled (maybe an Android bug?)
-     */
-    public static AlertDialog getLaunchIntentDialog(final AppCompatActivity activity, String msg, final Intent intent) {
-        return new AlertDialog.Builder(activity, R.style.Theme_K6nele_Dialog)
-                .setPositiveButton(activity.getString(R.string.buttonGoToSettings), (dialog, id) -> {
-                    activity.startActivity(intent);
-                    activity.finish();
-                })
-                .setNegativeButton(activity.getString(R.string.buttonCancel), (dialog, id) -> {
-                    dialog.cancel();
-                    activity.finish();
-                })
-                .setMessage(msg)
-                .setCancelable(false)
-                .create();
     }
 
     public static String getVersionName(Context c) {

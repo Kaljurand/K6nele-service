@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    // Settings that apply to the WebSocket-based server (also denoted as "fast" and "continuous")
-    // These cannot be configured using standard extras.
-    // TODO: rename Ime -> Ws
     <Preference
         android:key="@string/keyWsServer"
         android:summary="@string/defaultWsServer"
@@ -33,4 +30,14 @@
         android:summary="@string/summaryAudioFormat"
         android:title="@string/titleAudioFormat"
         app:iconSpaceReserved="false" />
+
+    <Preference
+        android:key="@string/keyAppInfo"
+        android:summary="@string/summaryAppInfo"
+        android:title="@string/titleAppInfo"
+        app:iconSpaceReserved="false">
+        <intent
+            android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+            android:data="package:ee.ioc.phon.android.k6neleservice" />
+    </Preference>
 </PreferenceScreen>
