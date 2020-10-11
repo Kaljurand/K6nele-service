@@ -11,7 +11,7 @@ dependencies {
     implementation 'androidx.preference:preference:1.1.1'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     //implementation 'androidx.activity:activity:1.2.0-alpha06'
-    implementation 'com.google.android.material:material:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
 }
 
 android {
@@ -24,8 +24,8 @@ android {
         applicationId 'ee.ioc.phon.android.k6neleservice'
         minSdkVersion 16
         targetSdkVersion 30
-        versionCode 6
-        versionName '0.0.06'
+        versionCode 7
+        versionName '0.0.07'
         vectorDrawables.useSupportLibrary = true
         // Keep only en and et resources
         resConfigs "en", "et"

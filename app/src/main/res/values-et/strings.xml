@@ -24,7 +24,7 @@
     <string name="menuHelp">Kasutusjuhend</string>
 
 
-    <string name="tvAbout">&lt;p>&lt;b>%1$s&lt;/b> on kõnetuvastusteenus Androidi rakendustele, eelkõige Kõnele rakendusele.&lt;/p>
+    <string name="tvAbout">&lt;p>&lt;b>%1$s&lt;/b> on kõnetuvastusteenus Androidi rakendustele, eelkõige &lt;a href="https://kaljurand.github.io/K6nele/">Kõnele&lt;/a> rakendusele.&lt;/p>
 
         &lt;p>Vaikimisi kasutab teenus TTÜ Küberneetika Instituudi foneetika ja kõnetehnoloogia labori eesti keele
 		kõnetuvastusserverit, vt &lt;a href="http://phon.ioc.ee">http://phon.ioc.ee&lt;/a>.&lt;/p>

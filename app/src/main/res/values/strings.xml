@@ -43,7 +43,7 @@
     <string name="menuAbout">About</string>
     <string name="menuHelp">Help</string>
 
-    <string name="tvAbout">&lt;p>%1$s is an app that offers a speech-to-text service to other apps, in particular to Kõnele.
+    <string name="tvAbout">&lt;p>%1$s is an app that offers a speech-to-text service to other apps, in particular to &lt;a href="https://kaljurand.github.io/K6nele/">Kõnele&lt;/a>.
         &lt;p>Service based on the Kaldi GStreamer server. The server URL can be changed. The default server supports Estonian and fast/accurate recognition.
         &lt;p>For more information, see &lt;a href="http://phon.ioc.ee">http://phon.ioc.ee&lt;/a>.
         &lt;p>See also the &lt;a href="https://github.com/Kaljurand/K6nele-service/blob/master/privacy_policy.rst">privacy policy&lt;/a>.</string>
