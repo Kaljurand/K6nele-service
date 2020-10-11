@@ -1,5 +1,5 @@
 /*
- * Copyright 2012-2013, Institute of Cybernetics at Tallinn University of Technology
+ * Copyright 2012-2020, Institute of Cybernetics at Tallinn University of Technology
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,37 +30,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ee.ioc.phon.android.k6neleservice.utils.Utils;
-import ee.ioc.phon.android.recsession.ChunkedWebRecSession;
 import ee.ioc.phon.android.speechutils.Extras;
 import ee.ioc.phon.android.speechutils.utils.BundleUtils;
 import ee.ioc.phon.android.speechutils.utils.IntentUtils;
 import ee.ioc.phon.android.speechutils.utils.PreferenceUtils;
 
 /**
- * <p>Builds a query for the speech recognizer server combing information from
- * various sources:</p>
+ * <p>Builds a query for the speech recognizer server combing information from various sources:</p>
  *
  * <ul>
  * <li>input extras</li>
  * <li>name of the calling app</li>
  * <li>stored preferences</li>
- * <li>app/grammar database</li>
  * </ul>
- *
- * <p>The following is some of the information that is sent to the server along with the audio.</p>
- *
- * <pre>
- * contentType
- * 		content type of the audio (e.g. "audio/x-flac;rate=16000")
- * serverUrl
- * 		URL of the recognizer server
- * grammarUrl
- * 		URL of the speech recognition grammar
- * grammarTargetLang
- * 		name of the target language (in case of GF grammars)
- * nbest
- * 		number of requested hypothesis
- * </pre>
  */
 public class ChunkedWebRecSessionBuilder {
 
@@ -68,14 +50,12 @@ public class ChunkedWebRecSessionBuilder {
 
     private final Context mContext;
 
-    private URL mWsUrl;
     private URL mLmUrl;
     private int mNbest;
     private String mGrammarTargetLang;
     private String mLang;
     private boolean mPartialResults = false;
     private String mPhrase;
-    private String mContentType;
     private String mUserAgentComment;
     private String mDeviceId;
     private String mCaller;
@@ -104,28 +84,13 @@ public class ChunkedWebRecSessionBuilder {
             setUserAgentComment(mCaller);
         }
 
-        // TODO
-        String urlService = prefs.getString(context.getString(R.string.keyHttpServer), context.getString(R.string.defaultHttpServer));
-        setFromExtras(extras, urlService);
+        setFromExtras(extras);
         mNbest = makeNbest(extras);
     }
 
-
     public void setUserAgentComment(String caller) {
-        // TODO: rename "RecognizerIntentActivity" to "K6nele"
-        mUserAgentComment = Utils.makeUserAgentComment("RecognizerIntentActivity", Utils.getVersionName(mContext), caller);
+        mUserAgentComment = Utils.makeUserAgentComment("K6nele-service", Utils.getVersionName(mContext), caller);
     }
-
-
-    public void setContentType(String contentType) {
-        mContentType = contentType;
-    }
-
-
-    public void setContentType(String mime, int sampleRate) {
-        setContentType(makeContentType(mime, sampleRate));
-    }
-
 
     public String getLang() {
         return mLang;
@@ -133,10 +98,6 @@ public class ChunkedWebRecSessionBuilder {
 
     public String getDeviceId() {
         return mDeviceId;
-    }
-
-    public URL getServerUrl() {
-        return mWsUrl;
     }
 
     public URL getGrammarUrl() {
@@ -159,44 +120,9 @@ public class ChunkedWebRecSessionBuilder {
         return mPartialResults;
     }
 
-
-    public ChunkedWebRecSession build() {
-        ChunkedWebRecSession recSession = new ChunkedWebRecSession(mWsUrl, mLmUrl, mGrammarTargetLang, mNbest);
-
-        if (mPhrase != null) {
-            recSession.setPhrase(mPhrase);
-        }
-
-        if (mLang != null) {
-            recSession.setLang(mLang);
-        }
-
-
-        if (mUserAgentComment != null) {
-            recSession.setUserAgentComment(mUserAgentComment);
-        }
-
-        if (mContentType != null) {
-            recSession.setContentType(mContentType);
-        }
-
-        if (mDeviceId != null) {
-            recSession.setDeviceId(mDeviceId);
-        }
-
-        if (mPartialResults) {
-            recSession.setParam("partial", "true");
-        }
-
-        return recSession;
-    }
-
-
     public List<String> toStringArrayList() {
         List<String> list = new ArrayList<>();
-        list.add(mWsUrl == null ? null : mWsUrl.toString());
         list.add(mLmUrl == null ? null : mLmUrl.toString());
-        list.add(mContentType);
         list.add(mGrammarTargetLang);
         list.add(mLang);
         list.add(mNbest + "");
@@ -208,7 +134,7 @@ public class ChunkedWebRecSessionBuilder {
     }
 
 
-    private void setFromExtras(Bundle extras, String urlServer) throws MalformedURLException {
+    private void setFromExtras(Bundle extras) throws MalformedURLException {
         mLang = makeLang(extras);
 
         mPartialResults = extras.getBoolean(RecognizerIntent.EXTRA_PARTIAL_RESULTS);
@@ -217,14 +143,6 @@ public class ChunkedWebRecSessionBuilder {
         mPhrase = extras.getString(Extras.EXTRA_PHRASE);
 
         mGrammarTargetLang = Utils.chooseValue(null, extras.getString(Extras.EXTRA_GRAMMAR_TARGET_LANG));
-
-        // The server URL should never be null
-        mWsUrl = new URL(
-                Utils.chooseValue(
-                        null,
-                        extras.getString(Extras.EXTRA_SERVER_URL),
-                        urlServer
-                ));
 
         // If the user has not overridden the grammar then use the app's EXTRA.
         String urlAsString = Utils.chooseValue(null, extras.getString(Extras.EXTRA_GRAMMAR_URL));
@@ -247,16 +165,6 @@ public class ChunkedWebRecSessionBuilder {
             return pendingIntent.getTargetPackage();
         }
         return null;
-    }
-
-
-    private static String makeContentType(String mime, int sampleRate) {
-        // little endian = 1234
-        // big endian = 4321
-        if ("audio/x-flac".equals(mime)) {
-            return "audio/x-flac";
-        }
-        return "audio/x-raw-int,channels=1,signed=true,endianness=1234,depth=16,width=16,rate=" + sampleRate;
     }
 
 

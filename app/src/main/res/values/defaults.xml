@@ -10,9 +10,6 @@
     <string name="defaultWsServer1" translatable="false">ws://bark.phon.ioc.ee:82/dev/duplex-speech-api/ws/speech</string>
     <string name="defaultWsServer2" translatable="false">wss://bark.phon.ioc.ee:8443/dev/duplex-speech-api/ws/speech</string>
 
-    <!-- TODO: remove this -->
-    <string name="defaultHttpServer" translatable="false">http://bark.phon.ioc.ee/speech-api/v1/recognize</string>
-
     <string name="defaultLocales" translatable="false">et-EE</string>
 
 </resources>

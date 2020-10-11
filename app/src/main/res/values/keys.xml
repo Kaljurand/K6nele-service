@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- TODO: remove this -->
-    <string name="keyHttpServer" translatable="false">keyHttpServer</string>
     <string name="keyAppInfo" translatable="false">keyAppInfo</string>
     <string name="keyWsServer" translatable="false">keyWsServer</string>
     <string name="keyLocales" translatable="false">keyLocales</string>
     <string name="keyWsAudioCues" translatable="false">keyWsAudioCues</string>
     <string name="keyWsAudioFormat" translatable="false">keyWsAudioFormat</string>
     <string name="keyWsAutoStopAfterPause" translatable="false">keyWsAutoStopAfterPause</string>
-
 </resources>
