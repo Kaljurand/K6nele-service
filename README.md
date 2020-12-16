@@ -1,5 +1,5 @@
-Kõnele
-======
+Kõnele service
+==============
 
 Kõnele service is an Android app that offers a speech-to-text service to other apps, in particular to Kõnele (<https://github.com/Kaljurand/K6nele>).
 It implements Android's [SpeechRecognizer](http://developer.android.com/reference/android/speech/SpeechRecognizer.html) interface using
