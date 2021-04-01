@@ -51,14 +51,14 @@ public class ChunkedWebRecSessionBuilder {
     private final Context mContext;
 
     private URL mLmUrl;
-    private int mNbest;
+    private final int mNbest;
     private String mGrammarTargetLang;
     private String mLang;
     private boolean mPartialResults = false;
     private String mPhrase;
     private String mUserAgentComment;
-    private String mDeviceId;
-    private String mCaller;
+    private final String mDeviceId;
+    private final String mCaller;
 
     public ChunkedWebRecSessionBuilder(Context context, Bundle extras, ComponentName callingActivity) throws MalformedURLException {
         mContext = context;
