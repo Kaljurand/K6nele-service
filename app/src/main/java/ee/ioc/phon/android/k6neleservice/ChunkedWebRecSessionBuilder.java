@@ -142,10 +142,10 @@ public class ChunkedWebRecSessionBuilder {
         // K6nele-specific extras
         mPhrase = extras.getString(Extras.EXTRA_PHRASE);
 
-        mGrammarTargetLang = Utils.chooseValue(null, extras.getString(Extras.EXTRA_GRAMMAR_TARGET_LANG));
+        mGrammarTargetLang = extras.getString(Extras.EXTRA_GRAMMAR_TARGET_LANG);
 
         // If the user has not overridden the grammar then use the app's EXTRA.
-        String urlAsString = Utils.chooseValue(null, extras.getString(Extras.EXTRA_GRAMMAR_URL));
+        String urlAsString = extras.getString(Extras.EXTRA_GRAMMAR_URL);
         if (urlAsString != null && urlAsString.length() > 0) {
             mLmUrl = new URL(urlAsString);
         }
