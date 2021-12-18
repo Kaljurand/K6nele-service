@@ -3,8 +3,6 @@ apply plugin: 'kotlin-android'
 
 dependencies {
     implementation project(':speechutils:app')
-    // TODO: use Android's JSON library instead
-    implementation 'com.googlecode.json-simple:json-simple:1.1'
     implementation 'com.koushikdutta.async:androidasync:3.1.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10"
     implementation 'androidx.appcompat:appcompat:1.4.0'
@@ -24,20 +22,20 @@ android {
         applicationId 'ee.ioc.phon.android.k6neleservice'
         minSdkVersion 16
         targetSdkVersion 31
-        versionCode 205
-        versionName '0.2.05'
+        versionCode 206
+        versionName '0.2.06'
         vectorDrawables.useSupportLibrary = true
         // Keep only en and et resources
         resConfigs "en", "et"
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '11'
     }
 
     packagingOptions {
