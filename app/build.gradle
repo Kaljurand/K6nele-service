@@ -6,12 +6,12 @@ dependencies {
     // TODO: use Android's JSON library instead
     implementation 'com.googlecode.json-simple:json-simple:1.1'
     implementation 'com.koushikdutta.async:androidasync:3.1.0'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10"
+    implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'androidx.preference:preference:1.1.1'
-    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
     // implementation 'androidx.activity:activity:1.3.0-alpha05'
-    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'com.google.android.material:material:1.4.0'
 }
 
 android {
@@ -23,9 +23,9 @@ android {
     defaultConfig {
         applicationId 'ee.ioc.phon.android.k6neleservice'
         minSdkVersion 16
-        targetSdkVersion 30
-        versionCode 200
-        versionName '0.2.00'
+        targetSdkVersion 31
+        versionCode 205
+        versionName '0.2.05'
         vectorDrawables.useSupportLibrary = true
         // Keep only en and et resources
         resConfigs "en", "et"
@@ -64,7 +64,7 @@ android {
     lintOptions {
         // TODO: in the future check for Kotlin-Java interop
         //check 'Interoperability'
-        disable 'ResourceType', 'AppLinkUrlError', 'EllipsizeMaxLines', 'RtlSymmetry', 'Autofill'
+        disable 'MissingPermission', 'ResourceType', 'AppLinkUrlError', 'EllipsizeMaxLines', 'RtlSymmetry', 'Autofill'
     }
 
     buildFeatures {
