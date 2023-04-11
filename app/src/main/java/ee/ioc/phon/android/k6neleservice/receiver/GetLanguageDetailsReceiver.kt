@@ -1,5 +1,5 @@
 /*
- * Copyright 2012-2020, Institute of Cybernetics at Tallinn University of Technology
+ * Copyright 2012-2023, Institute of Cybernetics at Tallinn University of Technology
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,10 +32,15 @@ class GetLanguageDetailsReceiver : BroadcastReceiver() {
         // val resultExtras = getResultExtras(true)
         // if (!resultExtras.isEmpty()) { ... }
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
-        val localesAsStr = PreferenceUtils.getPrefString(prefs, context.resources, R.string.keyLocales, R.string.defaultLocales);
+        val localesAsStr = PreferenceUtils.getPrefString(
+            prefs,
+            context.resources,
+            R.string.keyLocales,
+            R.string.defaultLocales
+        );
 
-        val langs = localesAsStr.split(",").map { it.trim() }.filter({ it.isNotEmpty() })
-        if (!langs.isEmpty()) {
+        val langs = localesAsStr.split(",").map { it.trim() }.filter { it.isNotEmpty() }
+        if (langs.isNotEmpty()) {
             val extras = Bundle()
             extras.putString(RecognizerIntent.EXTRA_LANGUAGE_PREFERENCE, langs[0])
             extras.putStringArrayList(RecognizerIntent.EXTRA_SUPPORTED_LANGUAGES, ArrayList(langs))

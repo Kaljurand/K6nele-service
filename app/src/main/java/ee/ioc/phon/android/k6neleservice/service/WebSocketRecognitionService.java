@@ -1,5 +1,7 @@
 package ee.ioc.phon.android.k6neleservice.service;
 
+import static android.Manifest.permission.RECORD_AUDIO;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,6 +12,8 @@ import android.os.Process;
 import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
 import android.util.Pair;
+
+import androidx.annotation.RequiresPermission;
 
 import com.koushikdutta.async.http.AsyncHttpClient;
 import com.koushikdutta.async.http.WebSocket;
@@ -67,6 +71,7 @@ public class WebSocketRecognitionService extends AbstractRecognitionService {
 
     private int mNumBytesSent;
 
+    @RequiresPermission(RECORD_AUDIO)
     @Override
     protected void configure(Intent recognizerIntent) throws IOException {
         Bundle bundle = getExtras();

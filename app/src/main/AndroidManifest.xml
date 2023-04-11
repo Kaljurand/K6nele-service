@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ee.ioc.phon.android.k6neleservice"
     android:installLocation="auto">
 
     <!-- Permission RECORD_AUDIO.
     Used to record the speech input to be transcribed.
-    This is an essential permission for Kõnele. Because it is also a "dangerous" permission,
-    then Kõnele requests it as soon as the user starts the audio recorder.
+    This is an essential permission for Kõnele-service. Because it is also a "dangerous" permission,
+    then Kõnele-service requests it as soon as the user starts the audio recorder.
     -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
@@ -36,6 +35,7 @@
         android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/labelApp"
+        android:localeConfig="@xml/locales_config"
         android:supportsRtl="true"
         android:theme="@style/Theme.K6nele">
 
