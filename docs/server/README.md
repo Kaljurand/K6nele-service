@@ -22,7 +22,7 @@ Install https://hub.docker.com/r/alumae/konele/
 and configure the Kõnele service "Server URL" to something like "ws://192.168.0.38:8080/client/ws/speech" (see below).
 
 See also
-http://kaljurand.github.io/Kõnele/docs/et/user_guide.html#tuvastusserver-koduv%C3%B5rgus
+http://kaljurand.github.io/K6nele/docs/et/user_guide.html#tuvastusserver-koduv%C3%B5rgus
 (in Estonian).
 
 ### whisper-fastapi
@@ -46,46 +46,50 @@ See more:
 
 - https://github.com/microsoft/WSL/issues/4150 (read only the most recent comments)
 - https://devblogs.microsoft.com/commandline/windows-subsystem-for-linux-september-2023-update/
-- https://devblogs.microsoft.com/commandline/windows-subsystem-for-linux-september-2023-update/
 - https://learn.microsoft.com/en-us/windows/wsl/wsl-config
 
 In WSL, install Python (with venv support), git, etc.
 Set up a Python venv and install CUDA as explained in
 https://github.com/SYSTRAN/faster-whisper
 
-
 ```
-pip install nvidia-cublas-cu11 nvidia-cudnn-cu11
+$ pip install nvidia-cublas-cu11 nvidia-cudnn-cu11
 ```
 
 Install https://github.com/heimoshuiyu/whisper-fastapi and its dependencies:
 
 ```
-git clone https://github.com/heimoshuiyu/whisper-fastapi.git
-cd whisper-fastapi
-pip install -r requirements.txt
+$ git clone https://github.com/heimoshuiyu/whisper-fastapi.git
+$ cd whisper-fastapi
+$ pip install -r requirements.txt
 ```
 
-Optional: Install finetuned Estonian models:
+Optional: Install finetuned Estonian models from https://huggingface.co/TalTechNLP
 
 ```
-pip install transformers[torch]
+$ pip install transformers[torch]
+# Note: the model page on Hugging Face instructs to add "--copy_files tokenizer.json",
+# but this results in an error because "tokenizer.json does not exist in model"
+$ ct2-transformers-converter --model TalTechNLP/whisper-medium-et --output_dir whisper-medium-et.ct2 --copy_files tokenizer.json --quantization float16
+
 # TODO: gets killed (16 GB is not enough?)
-ct2-transformers-converter --model TalTechNLP/whisper-large-et --output_dir whisper-large-et.ct2 --copy_files tokenizer.json --quantization float16
-# TODO: crashes with v3.22, try again with
-# https://github.com/OpenNMT/CTranslate2/releases/tag/v3.23.0
-ct2-transformers-converter --model TalTechNLP/whisper-medium-et --output_dir whisper-medium-et.ct2 --copy_files tokenizer.json --quantization float16
+$ ct2-transformers-converter --model TalTechNLP/whisper-large-et --output_dir whisper-large-et.ct2 --copy_files tokenizer.json --quantization float16
 ```
 
-
-Start the server, e.g. on port "3000":
+Start the server(s):
 
 ```
-export LD_LIBRARY_PATH=`python3 -c 'import os; import nvidia.cublas.lib; import nvidia.cudnn.lib; print(os.path.dirname(nvidia.cublas.lib.__file__) + ":" + os.path.dirname(nvidia.cudnn.lib.__file__))'`
-python whisper_fastapi.py --host 0.0.0.0 --port 3000 --model large-v3
+$ export LD_LIBRARY_PATH=`python3 -c 'import os; import nvidia.cublas.lib; import nvidia.cudnn.lib; print(os.path.dirname(nvidia.cublas.lib.__file__) + ":" + os.path.dirname(nvidia.cudnn.lib.__file__))'`
+$ whisper=pathto/to/whisper-fastapi/whisper_fastapi.py
+$ python $whisper --host 0.0.0.0 --port 3000 --model whisper-medium-et.ct2 &
+$ python $whisper --host 0.0.0.0 --port 3001 --model large-v3 &
 ```
 
-Change the Windows firewall rules to allow port "3000".
+Running multiple server might not work, depending on the available RAM.
+
+Change the Windows firewall rules to allow e.g. ports "3000-3010".
+Open "Windows Defender Firewall with Advanced Security on Local Computer", then "Inbound rules",
+and "New Rule...", and add the desired ports.
 See e.g. https://www.howtogeek.com/112564/how-to-create-advanced-firewall-rules-in-the-windows-firewall/
 
 The Kõnele service "Server URL" will be: ``ws://10.0.0.160:3000/k6nele/ws?initial_prompt=1+2+3``
