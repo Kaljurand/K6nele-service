@@ -4,16 +4,16 @@ apply plugin: 'kotlin-android'
 dependencies {
     implementation project(':speechutils:app')
     implementation 'com.koushikdutta.async:androidasync:3.1.0'
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.8.10'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'androidx.preference:preference-ktx:1.2.0'
-    implementation 'androidx.recyclerview:recyclerview:1.3.0'
-    // implementation 'androidx.activity:activity:1.7.0'
-    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.preference:preference-ktx:1.2.1'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    // implementation 'androidx.activity:activity-ktx:1.8.2'
+    implementation 'com.google.android.material:material:1.11.0'
 }
 
 android {
-    compileSdkVersion rootProject.compileSdkVersion
+    compileSdk rootProject.compileSdk
 
     // API level 7: MediaRecorder.AudioSource.VOICE_RECOGNITION
     // API level 8: android.speech.SpeechRecognizer and android.speech.RecognitionService
@@ -21,7 +21,7 @@ android {
     defaultConfig {
         applicationId 'ee.ioc.phon.android.k6neleservice'
         minSdkVersion 23
-        targetSdkVersion 33
+        targetSdkVersion 34
         versionCode 208
         versionName '0.2.08'
         vectorDrawables.useSupportLibrary = true
@@ -58,10 +58,10 @@ android {
         }
     }
 
-
     buildFeatures {
         viewBinding true
     }
+
     lint {
         // TODO: in the future check for Kotlin-Java interop
         //check 'Interoperability'
@@ -83,7 +83,7 @@ if (project.hasProperty('storeFilename') && project.hasProperty('storePassword')
 }
 
 
-task deploy {
+tasks.register('deploy') {
     doLast {
         description 'Copy the APK and the ProGuard mapping file to the deploy directory'
 
