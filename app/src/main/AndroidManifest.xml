@@ -29,6 +29,13 @@
 
     <!-- <uses-feature android:name="android.hardware.type.watch" /> -->
 
+    <queries>
+        <intent>
+            <!-- Packages that provide speech recognition services -->
+            <action android:name="android.speech.RecognitionService" />
+        </intent>
+    </queries>
+
     <application
         android:allowBackup="true"
         android:description="@string/descriptionApp"
@@ -70,7 +77,7 @@
             android:parentActivityName=".activity.PreferencesRecognitionServiceWs"
             android:windowSoftInputMode="stateUnchanged" />
 
-        <!-- This service is exported, i.e. any app can call K6nele, but needs to have recording-permission. -->
+        <!-- This service is exported, i.e. any app can call K6nele-service, but needs to have recording-permission. -->
         <!-- TODO: why can't I specify more permissions here? -->
         <service
             android:name=".service.WebSocketRecognitionService"

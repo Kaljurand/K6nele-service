@@ -22,8 +22,8 @@ android {
         applicationId 'ee.ioc.phon.android.k6neleservice'
         minSdkVersion 23
         targetSdkVersion 34
-        versionCode 208
-        versionName '0.2.08'
+        versionCode 210
+        versionName '0.2.10'
         vectorDrawables.useSupportLibrary = true
         // Keep only en and et resources
         resConfigs 'en', 'et'
