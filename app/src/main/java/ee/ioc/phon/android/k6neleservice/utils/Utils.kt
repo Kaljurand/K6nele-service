@@ -30,7 +30,8 @@ object Utils {
     @JvmStatic
     fun getVersionName(c: Context): String {
         val info = getPackageInfo(c) ?: return "?.?.?"
-        return info.versionName
+        val versionName = info.versionName ?: return "?.?.?"
+        return versionName
     }
 
     private fun getPackageInfo(c: Context): PackageInfo? {
@@ -45,6 +46,6 @@ object Utils {
 
     @JvmStatic
     fun makeUserAgentComment(tag: String, versionName: String, caller: String): String {
-        return "${tag}/${versionName}; ${Build.MANUFACTURER}/${Build.DEVICE}/${Build.DISPLAY}; ${caller}"
+        return "${tag}/${versionName}; ${Build.MANUFACTURER}/${Build.DEVICE}/${Build.DISPLAY}; $caller"
     }
 }
